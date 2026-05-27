@@ -44,15 +44,36 @@
 
 具體任務更新見 `openspec/changes/elder-companion-ai-90day-mvp/tasks.md` 校準版。
 
-## 對 deliverable 表達的影響
+## 對 deliverable 表達的影響（懷特 2026-05-27 校準）
 
-GitHub Page 主管 demo 角度：
-- 不是「我們已經跑完 90 天 MVP 看結果」
-- 是「我們設計了 90 天 MVP 計畫 + 商業模式，主管 review 是否 go/no-go 啟動」
+### GitHub Page 對外定位
+- **不是**「我們已經跑完 90 天 MVP 看結果」
+- **不是**「demo」（禁用此字眼）
+- **是**「**規劃 3 個月落地的長輩互動陪伴機器人 × AI Brain MVP 與商業模式**規劃書」，給公司主管 review
+
+### docs/* 內部仍保留三色標籤（供我們 + 懷特 review 用）
 
 所有 docs/* 文件加標示：
-- ✅ **已完成**：desk research / 規劃 / 分析 / 設計
-- 📋 **待計畫通過後執行**：實際訪談 / 招募 / Build / Pilot / 真實 PMF 量測
-- 🟡 **基於 desk 的可驗證假設**：Persona 假設 / WTP 範圍假設 / 競品 gap 假設（需 Phase 2 訪談驗證）
+- ✅ **desk-validated**：desk research / 規劃 / 分析 / 設計（有 ≥3 source 佐證）
+- 🟡 **hypothesis**：基於 desk 的可驗證假設（需 Phase 2 訪談驗證）
+- 📋 **post-approval execution**：待計畫通過後執行（實際訪談 / 招募 / Build / Pilot）
 
-GitHub Page 視覺：每個 deliverable 加角度標籤（綠 = desk-validated / 黃 = hypothesis / 灰 = post-approval execution）。
+### 對外網頁渲染紀律（T50 frontend-engineer 必遵守）
+
+| 元素 | docs/* 內部 | web/ 對外 |
+|---|---|---|
+| 角度標籤 ✅/🟡/📋 | 保留 | **剝離** |
+| 用詞「demo」 | 內部討論可用 | **禁用**，改稱「主管 review 規劃書」 |
+| 用詞「假設」「猜測」 | 保留 | **改寫**為「規劃」「設計」「分析」 |
+| 「Plan-Only Mode 校準」段 | 保留 | **不渲染進網頁** |
+| 「待 Phase 2 驗證」「需後續驗證」字樣 | 保留 | **重寫**為「下一階段確認」「規劃通過後執行」 |
+| Wizard-of-Oz / post-approval execution 等內部術語 | 保留 | **禁出現**，改用自然中文 |
+
+實作方式：
+- 自訂 MDX remark plugin 剝離 ✅/🟡/📋 emoji
+- 用詞 lint：build 前 grep 確認禁區字眼為 0
+- 「Plan-Only Mode」段在 MDX 上加 `{/* internal-only */}` 註解，frontend 過濾
+
+### 角度標籤的內部功能保留
+- 內部 review 時可一眼看出哪些段是 desk 已驗證、哪些是假設、哪些待執行
+- 給懷特用：他打開 docs/*.md 看「綠」就知道可放心、看「黃」知道需驗證、看「灰」知道需執行

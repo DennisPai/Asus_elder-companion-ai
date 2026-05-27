@@ -68,11 +68,11 @@
 - [ ] T48 Top 20 Q&A → docs/qa-top20.md
 - [ ] T49 Demo backup（影片 + 螢幕錄影）→ web/public/demo-video.mp4
 
-## Phase 8: Demo Day（W12）
-- [ ] T50 GitHub Page 全面 polish + interactive components 上線
-- [ ] T51 主管 demo
-- [ ] T52 收主管回饋 → docs/manager-feedback.md
-- [ ] T53 P/P/K Gate #2 + 下一階段 6 個月 milestone → docs/next-6-months.md
+## Phase 8: Demo Day（W12）— 懷特 2026-05-27 校準：到主管可 review 規劃書即完成
+- [ ] T50 GitHub Page 全面 polish + interactive components 上線（含對外用詞紀律：禁用「demo」/ 角度標籤 ✅🟡📋 剝離 / Plan-Only 內部術語不渲染）
+- [ ] T51 主管 review 規劃書（懷特親自跑，不稱「demo」）
+- [~] ~~T52 收主管回饋 → docs/manager-feedback.md~~ **退出範圍**（懷特 2026-05-27 校準）
+- [~] ~~T53 P/P/K Gate #2 + 下一階段 6 個月 milestone~~ **退出範圍**（懷特 2026-05-27 校準）
 
 ## Post-W12: Retrospective（另開 OpenSpec change）
 - [ ] T54 Retrospective：抽通用部分進 Mode E v6.4（不在此 change 範圍）

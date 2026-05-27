@@ -75,19 +75,40 @@ v6.3.1 Hub-Spoke 適用於本案 W5-9 Sprint Build 階段（內呼 backend-engin
 - next.config.js `output: 'export'` → static export
 - GitHub Actions: `web/` build → `gh-pages` branch → GitHub Pages
 
-### 4.2 主管 demo 視角設計（互動式）
+### 4.2 主管 review 視角設計（互動式 — 對外是「規劃書」非「demo」）
 - **Landing Page**：Why Now / Stakeholder Map / 5-concept matrix
 - **Persona Cards**：3 persona 可點開展開細節
 - **Competitor Filter**：競品比對表（按功能 / 定價 / 商模 filter）
 - **Lean Canvas SVG**：可 hover 看到每 block 來源 evidence
 - **Financial Model Table**：5 年預測（保守 / 中性 / 激進）可切換 + interactive
-- **Pitch Deck Viewer**：YC 10-slide embed
-- **Demo Video Embed**：Wizard of Oz prototype 錄影
+- **Slide Viewer**：規劃內容 slides 嵌入
+- **Concept Prototype Embed**：Wizard of Oz 概念示意（影片腳本＋設計，📋 規劃通過後實錄）
+
+### 4.2.1 對外網頁用詞紀律（懷特 2026-05-27 校準）
+
+**整體定位**：網頁呈現是一份**正式的「規劃 3 個月落地的長輩互動陪伴機器人 × AI Brain MVP 與商業模式」規劃書**，給公司主管 review。
+
+**用詞禁區**：
+- ❌ 禁用「demo」字眼（內部稱「主管 review 規劃書」）
+- ❌ 禁顯示角度標籤 ✅ desk-validated / 🟡 hypothesis / 📋 post-approval（這些是**內部 review 用**，不對外）
+- ❌ 禁出現「Plan-Only Mode」「Wizard-of-Oz」「post-approval execution」等內部術語
+- ❌ 禁出現「假設」「猜測」「待驗證」等減弱可信度的表達；改成「規劃」「設計」「分析」
+- ❌ 禁出現「我們還沒訪談」「等預算通過」「計畫尚未啟動」等內部時序揭露
+
+**docs/* 內部仍保留三色標籤**（給我們和懷特 review 用），但 web/ MDX 渲染層必須**剝離標籤 + 改寫用詞**才呈現給主管。
+
+**Frontend 實作 (T50)**：
+- 自訂 MDX remark plugin 剝離 ✅/🟡/📋 emoji
+- docs/*.md 「Plan-Only Mode 校準」段不渲染進網頁
+- docs/* 內部標題「（Plan-Only 校準）」字樣在 web 層自動剝除
+- 用詞校驗 lint：規劃通過前必跑 grep 確認禁區字眼為 0
 
 ### 4.3 不做什麼
 - 不做動態後端（純 static）
 - 不做用戶帳號 / login
 - 不做 analytics（主管直接看就好）
+- 不做 W12 P/P/K Gate 互動模組（T53 已退出範圍 — 懷特 2026-05-27 校準）
+- 不做主管回饋收集表單（T52 已退出範圍）
 
 ## 5. VoltAgent 補 agent 整合流程
 
@@ -101,3 +122,5 @@ v6.3.1 Hub-Spoke 適用於本案 W5-9 Sprint Build 階段（內呼 backend-engin
 - Mode E v6.4 升級（demo day 後 retrospective 才開新 change）
 - 量產執行（90 天 MVP 後事）
 - 實機購買硬體（W3-4 Build vs Buy 決定才知道要不要買）
+- **T52 收主管回饋 → docs/manager-feedback.md**（懷特 2026-05-27 校準：規劃書 ready 給主管 review 即完成，不收回饋）
+- **T53 W12 P/P/K Gate #2 + 下一階段 6 個月 milestone**（懷特 2026-05-27 校準：規劃書 ready 即完成）

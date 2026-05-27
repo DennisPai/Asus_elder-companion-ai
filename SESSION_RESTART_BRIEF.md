@@ -172,11 +172,14 @@ OpenSpec change `elder-companion-ai-90day-mvp/` 有 3 份文檔，**全部都要
 1. **禁止簡化** — 5 concept × 7 維度全做，不准抽樣後 summary
 2. **跟懷特繁中溝通**（程式碼識別符 + 主流技術品牌例外）
 3. **Discord-only 互動** — 所有 user-facing 訊息走 `/discord-reply` skill、不打 text output 期待懷特看到
-4. **Plan-Only Mode** — 所有 deliverable 加角度標籤 ✅/🟡/📋
+4. **Plan-Only Mode** — docs/* 內部加角度標籤 ✅/🟡/📋；**對外網頁必剝離 + 改寫用詞**（懷特 2026-05-27 校準，詳見 design.md §4.2.1）
 5. **驗證 sub-agent ≠ 實作 sub-agent** — Phase 0.5 結果整合後派獨立 sub-agent 驗證
-6. **Push commit/PR 前 git remote -v 確認** origin 是 `DennisPai/Asus_elder-companion-ai`（不是 fork 沒這問題、但保險檢查）
-7. **PAT 已 setup**（GH_TOKEN 在 env vars，gh credential helper 設好）— 直接 `git push origin main` 即可、不需要重新登入
+6. **Push commit/PR 前 git remote -v 確認** origin 是 `DennisPai/Asus_elder-companion-ai`
+7. **PAT 已 setup**（GH_TOKEN 在 env vars，gh credential helper 設好）— 直接 `git push origin main` 即可
 8. **feature-factory 不需要啟動** — 本案不走 Mode A/B/C/D，走 PM Flow v0.1 自訂 SOP
+9. **VoltAgent fork 三 agent 無 Write tool**（market-researcher / competitive-analyst / data-researcher）— 派遣 prompt 不要寫「寫到 /tmp/xxx.md」，改成「直接回報內容」由 main agent 寫入
+10. **T52 + T53 已退出範圍**（懷特 2026-05-27 校準）— 到主管可 review 規劃書即完成
+11. **對外網頁用詞紀律**（懷特 2026-05-27 校準）— 禁用「demo」/ 不顯示 ✅🟡📋 / 不顯示 Plan-Only 內部術語 / 內部用詞改寫成正式規劃書語氣
 
 ---
 
