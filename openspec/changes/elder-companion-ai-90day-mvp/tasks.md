@@ -64,13 +64,14 @@
 - [x] T43 法規 Soft Check → docs/regulatory-check.md（612 行；PDPA + AI 基本法 + 消保法 + 醫療法 + 老人福利法 + 律師費 NT$70-110 萬）
 - 獨立驗證 sub-agent CONDITIONAL PASS（4 Major / 7 Minor / 4 Nice-to-have）；4 Major 全修：M1 T40 戶數 50-100 → 15-20（對齊 T39+T41 規模）/ M2 T41 D30 ≥70% → ≥60%（良好）+ ≥70%（stretch，對齊 T42 §1.2）/ M3 T39 Sprint 4 期間 W11-W13 → W11-W12（SSOT decision-w6.md §7.1）/ M4 T43 PDPA 2025/11 → 2025/12 修訂版（立院 11 月通過）
 
-## Phase 7: Pitch Prep（W10-12）
-- [ ] T44 Why Us + 護城河 deep dive → docs/why-us-moat.md
-- [ ] T45 5 年財務模型 + Use of Funds → docs/financial-model.md
-- [ ] T46 YC 10-slide deck → docs/pitch-deck.md
-- [ ] T47 5-min pitch script → docs/pitch-script.md
-- [ ] T48 Top 20 Q&A → docs/qa-top20.md
-- [ ] T49 Demo backup（影片 + 螢幕錄影）→ web/public/demo-video.mp4
+## Phase 7: Pitch Prep（W10-12）— DONE 2026-05-27
+- [x] T44 Why Us + 護城河 deep dive → docs/why-us-moat.md（679 行；4 維護城河 + 7 競品比較 + Year 1-5 演進）
+- [x] T45 5 年財務模型 + Use of Funds → docs/financial-model.md（642 行；3 情境 P&L + 燒錢曲線 + 4 輪募資 Pre-Seed/Seed/Series A/B + Series A NT$8,500 萬 + Y5 中性 Net Income NT$1.9 億）
+- [x] T46 主管 review deck（原 YC 10-slide → 改主管 review tone）→ docs/pitch-deck.md（871 行；14 主 slides + 7 backup + 視覺指引 + Pacing 3 種）
+- [x] T47 5-min 主管 review pitch script（原 demo script）→ docs/pitch-script.md（336 行；Hook/Stakes/Solution Walkthrough/Validation/Ask + 3-min/5-min/10-min 三版本）
+- [x] T48 Top 20 主管 Q&A → docs/qa-top20.md（480 行；20 Q × CLEAR framework + 5 主題覆蓋）
+- 獨立驗證 sub-agent CONDITIONAL PASS（3 Major / 9 Minor / 5 Nice-to-have）；3 Major 全修：M1 pitch-script 65+ 人口 419 萬 → 467 萬（2025/12 SSOT，4 doc 一致）/ M3 pitch-deck S8 LTV NT$93,000 → NT$23,820 + CAC NT$15,630 → NT$4,000（對齊 unit-econ.md §7.2 SSOT，避免對主管最致命的數字錯誤）/ M2 financial-model §5.2 加 Series A 估值法校準說明（decision-w6 P/S 5× NT$2 億 vs financial-model ARR 20-33× NT$25 億 = 不同情境區間）
+- [ ] T49 Backup video（原 demo backup，改稱「主管 review backup video」）→ web/public/backup-video.mp4（影片製作待懷特 Phase 8 啟動，📋 post-approval）
 
 ## Phase 8: Demo Day（W12）— 懷特 2026-05-27 校準：到主管可 review 規劃書即完成
 - [ ] T50 GitHub Page 全面 polish + interactive components 上線（含對外用詞紀律：禁用「demo」/ 角度標籤 ✅🟡📋 剝離 / Plan-Only 內部術語不渲染）
