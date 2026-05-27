@@ -14,9 +14,9 @@
 - [x] T10a SESSION_RESTART_BRIEF.md 寫好（給新 session 接續用）
 
 ## Phase 0.5: 題目拆解（W0）
-- [ ] T11 派 product-manager 總控 + ≥5 sub-agent 並行跑 5 concept × 7 維度
-- [ ] T12 整合 → docs/phase-0.5-deconstruction.md
-- [ ] T13 push CC + Discord 通知懷特 review
+- [x] T11 派 5 sub-agent 並行跑 5 concept × 7 維度（Batch 1: project-idea-validator / market-researcher / competitive-analyst / data-researcher + Batch 2: assumption-mapping 整合 concept 5）
+- [x] T12 整合 → docs/phase-0.5-deconstruction.md（含 7/7 Gate 通過 + 獨立驗證 sub-agent /tmp/phase-0.5-validation-findings.md）
+- [x] T13 push GitHub + Discord 通知懷特 review
 
 ## Phase 1: Problem Framing（W1）
 - [ ] T14 TAM/SAM/SOM 量化 + Why Now 論證 → docs/problem-framing.md §1
