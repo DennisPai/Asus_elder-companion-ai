@@ -41,13 +41,14 @@
 - [x] T29 W4 P/P/K Gate #1 → docs/decision-w4.md（658 行；self-drive 結論：主軸 Hyp A B2C DTC Persevere / 次主軸 Hyp D Freemium Persevere 入口 + Hyp B B2B2C Year 1 H2 hedge / Hyp C 保險延 Year 3+）
 - 獨立驗證 sub-agent CONDITIONAL PASS（2 Major / 5 Minor / 3 Nice-to-have）；2 Major 已修補：M1 decision-w4.md「Mode E」→「PM Flow v0.1」/ M2 NT$1,200 vs NT$1,290 跨 doc 校準補注
 
-## Phase 4: Business Model（W4-5）
-- [ ] T30 Lean Canvas v1 → docs/lean-canvas.md
-- [ ] T31 收入模型 narrow 4 選項評估 → docs/revenue-model.md
-- [ ] T32 Pricing × WTP 對齊 + 三層 tier → docs/pricing.md
-- [ ] T33 Hardware Unit Econ（BOM + 庫存 + 製造 + 認證費）→ docs/unit-econ.md
-- [ ] T34 認證時程估算（CNS / CE / FDA 若涉醫療）→ docs/cert-timeline.md
-- [ ] T35 W6 P/P/K Gate Mid-point → docs/decision-w6.md
+## Phase 4: Business Model（W4-5）— DONE 2026-05-27
+- [x] T30 Lean Canvas v1 → docs/lean-canvas.md（595 行；3 Canvas A 主軸 + D 入口 + B hedge）
+- [x] T31 收入模型 narrow 4 選項評估 → docs/revenue-model.md（747 行；Y1-3 ARR 三情境，Hyp A: Y3 NT$864-3,000 萬）
+- [x] T32 Pricing × WTP 對齊 + 三層 tier → docs/pricing.md（818 行；Starter NT$799 / Pro NT$1,290 / Premium Custom + Anchor+Decoy）
+- [x] T33 Hardware Unit Econ（BOM + 庫存 + 製造 + 認證費）→ docs/unit-econ.md（622 行；LTV:CAC 中性 5.95:1 / Payback 4.0 月 / Break-even Y3 Month 30-36）
+- [x] T34 認證時程估算（CNS / CE / FDA 若涉醫療）→ docs/cert-timeline.md（509 行）+ docs/regulatory-checklist.md（259 行，bonus pre-work for T43）
+- [x] T35 W6 P/P/K Gate Mid-point → docs/decision-w6.md（849 行；self-drive 結論：Hyp A/D Persevere 確認 / Hyp B 次軸觀察 / Hyp C 延 Year 3+，無 Pivot/Kill/Scale）
+- 獨立驗證 sub-agent CONDITIONAL PASS（4 Major / 6 Minor / 3 Nice-to-have）；4 Major 全修：M1-M3 三 doc 移除 Mode E 校準括號字眼 / M4 lean-canvas + pricing 加 LTV:CAC W4→T33 校準說明（4.04→5.95）；Minor 1/2 task 編號 swap 修補；Minor 5 PDPA 日期統一（2025/12 修訂版 + 2025/11 立法院三讀通過）
 
 ## Phase 5: Prototype Build（W5-9）
 - [ ] T36 Sprint 1-2: Wizard of Oz prototype（市售平板 + OpenAI/Claude API + 後台人在環）
