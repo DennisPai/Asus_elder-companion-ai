@@ -1,16 +1,17 @@
 # Tasks: Elder Companion AI — 90 Day MVP
 
-## Phase 0: Setup（this session）
+## Phase 0: Setup（this session — DONE 2026-05-27）
 - [x] T1 建專案目錄 + git init
 - [x] T2 寫 OpenSpec proposal / design / tasks
-- [ ] T3 派 Explore 跑 VoltAgent 候選表（背景中）
-- [ ] T4 寫 sop/pm-flow-v0.1.md
-- [ ] T5 寫 sop/phase-0.5-framework.md
-- [ ] T6 問懷特 Phase 0 五題（產業 / target audience / 預算 / demo 對象 / geo）→ 產 phase-0-answers.md
-- [ ] T7 收 Explore 回報 → push CC → 懷特勾選 VoltAgent 候選 agent
-- [ ] T8 copy 勾選 agent 進 ~/.claude/agents/ + frontmatter 修改
-- [ ] T9 建 web/ Next.js static export skeleton + GitHub Actions workflow
-- [ ] T10 commit + push 到 DennisPai GitHub + 開 GitHub Pages
+- [x] T3 派 Explore 跑 VoltAgent 候選表（背景完成、154 agent / MIT / 10/10 缺角色全對應）
+- [x] T4 寫 sop/pm-flow-v0.1.md（8 phase / 29 step / 跟 Mode E 差異對照表）
+- [x] T5 寫 sop/phase-0.5-framework.md（5 concept × 7 維度 + 並行派遣策略）
+- [x] T6 問懷特 Phase 0 五題 → docs/phase-0-answers.md（含 Plan-Only Mode 校準）
+- [x] T7 候選 agent 表 Discord 給懷特 → 懷特決策「你決定就好」（全選）
+- [x] T8 copy 7 + fork 3 + 新建 1 = 11 個 agent 進 ~/.claude/agents/、frontmatter 加 source/license/mode
+- [x] T9 建 web/ Next.js 14 static export skeleton + GitHub Actions Pages workflow
+- [x] T10 commit + push 到 DennisPai/Asus_elder-companion-ai（4 commits / 最終 hash 1558335）
+- [x] T10a SESSION_RESTART_BRIEF.md 寫好（給新 session 接續用）
 
 ## Phase 0.5: 題目拆解（W0）
 - [ ] T11 派 product-manager 總控 + ≥5 sub-agent 並行跑 5 concept × 7 維度

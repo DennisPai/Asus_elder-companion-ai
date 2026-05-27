@@ -106,6 +106,19 @@
 
 ## 7. ⏳ 下一步明確指令（重啟後立刻做）
 
+### 動作 0: 同步 OpenSpec tasks.md status（必跑）
+
+```
+Read openspec/changes/elder-companion-ai-90day-mvp/tasks.md
+```
+
+這份是 SSOT — 看哪些 [x] 已勾、哪些 [ ] 未勾。**目前 status**：
+- Phase 0 (T1-T10a) 全部 [x] 已完成
+- Phase 0.5 (T11-T13) **下一步要做**
+- Phase 1-8 (T14-T54) 後續 phase
+
+進度推進原則：每完成一個 task → Edit tasks.md 把 [ ] 改成 [x] → commit/push。讓 GitHub 上的 tasks.md 永遠 reflect 真實 status。
+
 ### 動作 1: 派遣 Phase 0.5（5 concept × 7 維度）
 
 依 `sop/phase-0.5-framework.md` 並行派遣：
@@ -208,7 +221,9 @@ VoltAgent local clone：`~/repos/awesome-claude-code-subagents/`
 你的動作：
 1. `cd ~/projects/elder-companion-ai-mvp`
 2. Read `SESSION_RESTART_BRIEF.md`（這份）
-3. Read `sop/phase-0.5-framework.md`
-4. Read `docs/phase-0-answers.md`
-5. 立刻派遣 Phase 0.5 5-agent batch（依第 7 段指令）
-6. 過程進度推 Discord（走 `/discord-reply` skill）
+3. **Read `openspec/changes/elder-companion-ai-90day-mvp/tasks.md`**（OpenSpec SSOT 確認 T1-T10a 已勾、T11 是下一步）
+4. Read `sop/phase-0.5-framework.md`
+5. Read `docs/phase-0-answers.md`
+6. 立刻派遣 Phase 0.5 5-agent batch（依第 7 段指令）
+7. 每完成一個 OpenSpec task → Edit tasks.md 改 [x] → commit/push（讓 GitHub 上 status 同步真實進度）
+8. 過程進度推 Discord（走 `/discord-reply` skill）
