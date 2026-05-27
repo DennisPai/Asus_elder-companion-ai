@@ -1,254 +1,191 @@
-# 🔄 Session Restart Brief — Elder Companion AI MVP
+# 🔄 Session Restart Brief — Elder Companion AI MVP（2026-05-27 02:30 更新）
 
-> **下次 session 重啟後**，懷特會說：「到 `~/projects/elder-companion-ai-mvp` 讀 `SESSION_RESTART_BRIEF.md`」。
-> 讀完此檔即接上現在進度、立刻動工 Phase 0.5。
-
----
-
-## 1. 任務概覽
-
-**任務**：規劃「長者互動陪伴機器人 × AI Brain」可於 3 個月內落地展示的 MVP + 商業模式
-**最終 deliverable**：GitHub Page 互動式 dashboard 給公司主管 1 位看
-**工作目錄**：`~/projects/elder-companion-ai-mvp`
-**GitHub repo**：https://github.com/DennisPai/Asus_elder-companion-ai （PAT 已 setup, gh auth ok）
-**起始日期**：2026-05-27
-**最後一次 commit**：a1a5752（restore workflow）
+> **新 session 啟動後必讀此檔**，3 分鐘接手任務狀態 → 立刻進 Phase 3。
+> 上一個 session 完成 Phase 0.5 + 1 + 2（commit 9a64ed3），下一個任務 Phase 3 Product + Tech（T24-T29 共 6 個 sub-agent task）。
 
 ---
 
-## 2. ⚠️ Plan-Only Mode（最重要的校準）
+## 1. 任務一句話
 
-**懷特明示**：「現在要列 MVP 和商業模式的計畫，你這邊假設的那些成本，都一定是計畫通過之後的事情(像是訪談、招募)，現在列的計畫不能說要做完訪談或招募後才能做計畫。」
+規劃「**長輩互動陪伴機器人 × AI Brain**」可於 3 個月內落地展示的 MVP + 商業模式，最終 deliverable 是 GitHub Page 互動式規劃書給**華碩（ASUS）負責 AI 代理人 / 服務型機器人主管 1 位** review。
 
-**含義**：
-- 所有 deliverable 是 **規劃書**、不是執行成果
-- Phase 2 訪談：寫**計畫 + Persona 假設 + Mom Test 大綱**（不實際訪）
-- Phase 5 Prototype：寫**規格書 + 開發計畫 + 技術選型**（不實際 build）
-- Phase 6 Pilot：寫**設計書 + MoU template + 量測機制**（不實際跑）
-- 所有文件加角度標籤：✅ desk-validated / 🟡 hypothesis / 📋 post-approval execution
-
-詳細校準見 `docs/phase-0-answers.md`。
+- 工作目錄：`~/projects/elder-companion-ai-mvp`
+- GitHub repo：https://github.com/DennisPai/Asus_elder-companion-ai （PAT 已 setup）
+- 最終 GitHub Page URL：https://dennispai.github.io/Asus_elder-companion-ai/
+- 採用流程：**PM Flow v0.1**（不走 Mode E）
+- 起始日期：2026-05-27 / 預計 W12 結束
 
 ---
 
-## 3. 採用的流程：PM Flow v0.1（不走 Mode E）
+## 2. ⚠️ 4 個關鍵紀律（最重要，違反一條就要重做）
 
-**為什麼不走 Mode E**：Mode E v6.3 是「方法論縮影」、重 method completeness 輕 ship 路徑，對 hardware + vulnerable population 場景 generic 不夠 specific。詳見 `sop/pm-flow-v0.1.md` 開頭設計原則。
+### 2.1 Plan-Only Mode（懷特 2026-05-27 校準）
+- 所有 deliverable 是「規劃書」**不是執行成果**
+- 不執行真實訪談 / 招募 / build / pilot
+- docs/* 內部保留三色標籤：✅ desk-validated / 🟡 hypothesis / 📋 post-approval execution
+- **對外網頁渲染必剝離標籤 + 改寫用詞**（依 design.md §4.2.1）
+- 對外網頁**禁用「demo」字眼**，改稱「主管 review 規劃書」
 
-**8 phase / 29 step**（已寫進 `sop/pm-flow-v0.1.md`）：
-- Phase 0 ✅ 完成（5 問已答、見 `docs/phase-0-answers.md`）
-- Phase 0.5 ⏳ **下一步要派遣 agent 跑**（題目拆解 5 concept × 7 維度）
-- Phase 1-8 待跑
+### 2.2 報告對象 = 華碩 AI 代理人 / 服務型機器人主管（懷特 2026-05-27 18:00 精確化）
+- ASUS Zenbo Junior II 數據必再三查證（主管是該產品線 owner，錯誤致命）
+- 對 ASUS 段落客觀中立（不過度推銷 / 不刻意迴避 / 不抬舉貶抑）
+- MVP 不必跟 Zenbo Junior II 有關（不加分不扣分）
+- ASUS 相關章節已於 commit 7bac798 客觀中立改寫，不要再倒退
 
-**核心紀律**：
-- W6 / W12 兩次 P/P/K Gate（不是 Mode E 三次）
-- discovery 3w / build 5w / pilot 2w / pitch 2w 的時間配比
-- Kano > RICE 場景權重（長者產品 Kano filter 後再 RICE 排序）
+### 2.3 1 task = 1 sub-agent invocation（懷特 2026-05-27 17:25 嚴令）
+- 即使 agent type 相同（如 ux-researcher 跑 T19 + T22），也必須兩次獨立 invocation
+- 禁止寫「合併 / 省 token」prompt
+- 詳見全域 memory `feedback_no_combine_subagents.md`
 
----
+### 2.4 Sub-agent 必直接 Write 進檔案（懷特 2026-05-27 18:30 校準）
+- **派 sub-agent 前必 grep 工具 audit**：`grep "^tools:" ~/.claude/agents/{name}.md`
+- 13/15 PM Flow agent 都有 Write tool（只 ux-researcher / hipaa-compliance 沒有）
+- Prompt 標準寫法：「**請 Write 進 docs/X.md + 回報給 main agent 5 行內**」
+- 禁寫「不准依賴 Write tool」「直接回報完整內容」（這會把 sub-agent 50KB output 灌進 main context）
+- 詳見全域 memory `feedback_subagent_write_to_file.md`
 
-## 4. Phase 0 五問答案（已定）
-
-| # | 問題 | 答案 |
-|---|---|---|
-| 1 | 產業 | **B2C** |
-| 2 | Target Audience | **長者的子女**（buyer + decision maker；長者本人是 end user 但不是付款人）|
-| 3 | 預算 | **不限**，但 Plan-Only Mode（不能假設要做完訪談/招募才寫計畫）|
-| 4 | Demo 對象 | **華碩（ASUS）負責 AI 代理人 / 服務型機器人主管 1 位**（2026-05-27 18:00 懷特精確化）|
-| 5 | Geo | **台灣 only**（法規 narrow 到 PDPA + 衛福部 + 經濟部）|
-
----
-
-## 5. ✅ 已完成（本 session）
-
-- ✅ OpenSpec change `openspec/changes/elder-companion-ai-90day-mvp/`（proposal / design / tasks / 54 任務）
-- ✅ SOP `sop/pm-flow-v0.1.md`（8 phase / 29 step / 跟 Mode E 差異對照表）
-- ✅ Phase 0.5 framework `sop/phase-0.5-framework.md`（5 concept × 7 維度）
-- ✅ VoltAgent 候選表 `research/voltagent-candidates.md`（11 個 agent 全 setup）
-- ✅ Phase 0 答案 `docs/phase-0-answers.md`（含 Plan-Only Mode 校準）
-- ✅ Next.js 14 static export skeleton `web/`（app router + Tailwind + recharts + MDX）
-- ✅ GitHub Actions workflow `.github/workflows/deploy-pages.yml`
-- ✅ CREDITS.md（VoltAgent MIT attribution）
-- ✅ Push 全部到 GitHub（3 commits / 19+ files）
+### 2.5 Discord-only 互動 + Self-drive（補充）
+- 懷特透過 Discord 跟我互動，**text output 他看不到**，全部走 `/discord-reply` skill
+- 多階段任務**預設 self-drive** 不等懷特 approve，例外才升級（重大決策 / 兩輪修正仍 fail）
+- 完成任務後主動 Discord 通知 + 推 GitHub URL
 
 ---
 
-## 6. ✅ Agent fleet 已部署（11 個全部已在 ~/.claude/agents/）
+## 3. ✅ 已完成（Phase 0.5 + 1 + 2，commit 9a64ed3）
 
-### 直接 copy from VoltAgent MIT（7 個）
-| Agent | 用於 Phase | 角色 |
-|---|---|---|
-| business-analyst | 1 / 3 | Stakeholder Mapping + Build vs Buy 框架 |
-| market-researcher | 0.5 / 1 | TAM/SAM/SOM + Why Now |
-| project-idea-validator | 0.5 / 1 / 2 | 假設破壞 + 概念驗證 |
-| competitive-analyst | 0.5 / 7 | 競品 deep dive + moat 分析 |
-| data-researcher | 0.5 / 1 | 老齡人口統計 / 競品用戶畫像 |
-| legal-advisor | 1 / 4 / 6 | 個資 / 醫療器械 / 隱私政策 |
-| hipaa-compliance | 6 | 健康資料合規思維（美國藍本、適用框架） |
+### Phase 0.5 題目拆解（W0）
+- `docs/phase-0.5-deconstruction.md`（749 行 / 80 KB）
+- 5 concept × 7 維度 + 4 Lean Canvas hypothesis（A B2C DTC / B B2B2C 機構 / C B2B 保險 PMPM / D Freemium App）+ §5.4 5 個 Phase 2 驗證假設
+- 獨立驗證 sub-agent 7/7 Gate PASS
 
-### Fork 改造（3 個）
-| Agent | 用於 Phase | 角色 |
-|---|---|---|
-| elderly-risk-mapper | 1 | vulnerable population 紅線清單 + 倫理風險 |
-| hardware-unit-econ-modeler | 4 | BOM / 庫存 / 認證費 / working capital |
-| 5yr-financial-modeler | 7 | 3 scenario 5 年 P&L + 燒錢曲線 + Use of Funds |
+### Phase 1 Problem Framing（W1）
+- `docs/problem-framing.md`（1017 行 / 86 KB）
+- §1 TAM / SAM / SOM 三向交叉 + Why Now 6 趨勢
+- §2 Stakeholder Mapping 5 大類 × 19 子分類 + Engagement Timeline W0-W12
+- §3 Ethical Risk 10 條紅線 × 8 維度 + 7 條 LLM 絕對紅線 + 危機 SOP
+- §4 4 競品 deep dive（PARO / ElliQ / Mabu / ASUS Zenbo Jr）+ Build vs Buy 4 層輸入給 Phase 3
+- §4.4 ASUS Zenbo Junior II 2024-2026 再三查證（commit 7bac798 客觀中立改寫）
 
-### 新建（1 個）
-| Agent | 用於 Phase | 角色 |
-|---|---|---|
-| kano-model-prioritizer | 3 | Kano 5 類別 + 3 persona 矩陣 + Reverse 屬性 |
+### Phase 2 Customer Discovery（W2-3，Plan-Only 校準）
+- `docs/persona.md`（T19，34 KB）：3 persona × 10 維度 + 長者方 vignette ×3 + 共通需求 6 條
+- `docs/interview-guide.md`（T20）：3 群組訪談大綱 × ≤8 題 + Mom Test 倫理校驗
+- `docs/interview-plan.md`（T21，📋）：5 面向招募計畫 + 預算 NT$104,280
+- `docs/jtbd-day-in-life.md`（T22）：3 JTBD + 3 Day-in-the-Life + 負面 JTBD
+- `docs/wtp-payer.md`（T23）：4 framework WTP 中位 NT$1,000-1,500/月 + 三層 Tier + 4 類付款人
 
-### 跳過（衝突）
-- `ux-researcher` — 既有 user-level agent 保留、不覆蓋
-- `assumption-mapping` — 既有 user-level agent 保留、不覆蓋
+### 校準與紀律 commit
+- commit f6834c6：對外網頁紀律（剝離標籤 / 禁「demo」）
+- commit 7bac798：ASUS Zenbo II 客觀中立改寫 + 報告對象精確化
 
 ---
 
-## 7. ⏳ 下一步明確指令（重啟後立刻做）
+## 4. ⏳ 下一步：Phase 3 Product + Tech（T24-T29，W3-4）
 
-### 動作 0: 讀完整 OpenSpec change 三件套（必跑、依序）
+### 6 個 task（嚴守 1:1，6 個獨立 sub-agent invocation）
 
-OpenSpec change `elder-companion-ai-90day-mvp/` 有 3 份文檔，**全部都要讀**：
+| Task | 派誰 | Output | 重點 |
+|---|---|---|---|
+| **T24** Build vs Buy 決策分析 | business-analyst | docs/build-vs-buy.md | 硬體：Wizard-of-Oz 平板 / ODM 台灣 / ASUS Zenbo OEM 評估；AI Brain：GPT-4o/Claude API / 開源 Llama-Qwen / 混合架構 / 自研 |
+| **T25** MVP 類型決策 | business-analyst（第 2 次 invocation）| docs/mvp-type.md | Concierge / Wizard of Oz / Functional 三選；走 mvp-type-selector skill 思路 |
+| **T26** 技術架構 + 隱私邊界 | spec-writer | docs/tech-architecture.md | 雲端 vs 邊緣推理 / PDPA 邊界 / 資料流 |
+| **T27** Feature Triage MoSCoW+RICE+Kano | kano-model-prioritizer | docs/feature-triage.md | Must-be/Performance/Excitement 三類；長者場景 Kano > RICE |
+| **T28** Safety 紅線清單 | elderly-risk-mapper | docs/safety-redlines.md | 不做醫療診斷 / 急救決策 / 投藥提醒；責任歸屬 |
+| **T29** W4 P/P/K Gate #1 | pivot-decision-helper | docs/decision-w4.md | Pivot/Persevere/Kill/Scale 4 option 決策 framework；要懷特 approve |
+
+### 派遣標準 prompt 模板
 
 ```
-1. Read openspec/changes/elder-companion-ai-90day-mvp/proposal.md
-   ← 為什麼做、What Changes、Impact、Out of Scope、Success Criteria
+任務：Phase 3 T24 Build vs Buy 決策分析 → docs/build-vs-buy.md
 
-2. Read openspec/changes/elder-companion-ai-90day-mvp/design.md
-   ← 架構決策、PM Flow vs Mode E 對照、Phase 0.5 framework 設計、
-     Hub-Spoke 適用性、GitHub Page 架構、VoltAgent 整合流程、Out of Scope
+# MUST 讀（完整讀）
+1. docs/problem-framing.md §4.7 Build vs Buy implications（給 Phase 3 T24 輸入）
+2. docs/phase-0.5-deconstruction.md §5.2 4 hypothesis
+3. docs/phase-0-answers.md（Plan-Only Mode + 報告對象華碩主管）
 
-3. Read openspec/changes/elder-companion-ai-90day-mvp/tasks.md
-   ← SSOT 任務狀態。看哪些 [x] 已勾、哪些 [ ] 未勾
+# 你的範圍
+[具體輸出要求]
+
+# 紀律
+1. Plan-Only Mode：標 ✅ / 🟡 / 📋
+2. 報告對象華碩主管：客觀中立、不推銷 ASUS 合作
+3. 直接 Write 到 docs/build-vs-buy.md（你有 Write tool）
+
+# 回報給 main agent 只要 5 行：
+1. 檔案是否寫好（行數）
+2. 核心結論 1-2 句
+3. 卡關項目
+4. Coverage Matrix 摘要 ≤3 行
+5. Next step 建議
 ```
 
-**目前 task status**（tasks.md 真實 reflect）：
-- Phase 0 (T1-T10a) 全部 [x] 已完成
-- Phase 0.5 (T11-T13) **下一步要做**
-- Phase 1-8 (T14-T54) 後續 phase
+### Phase 3 完成後動作
 
-進度推進原則：每完成一個 task → Edit tasks.md 把 [ ] 改成 [x] → commit/push。讓 GitHub 上的 tasks.md 永遠 reflect 真實 status。
-
-**proposal.md / design.md 改動規則**：scope 或架構有實質變更才改、改了必跟懷特升級。一般執行進度只動 tasks.md。
-
-### 動作 1: 派遣 Phase 0.5（5 concept × 7 維度）
-
-依 `sop/phase-0.5-framework.md` 並行派遣：
-
-**Batch 1（同時派 5 個 sub-agent）：**
-```
-1. assumption-mapping → 跑「concept 5 三者 combine」整合 + 假設清單
-   待 batch 2 完成才開始
-
-2. market-researcher → concept 1-4 共用 TAM/SAM/SOM + Why Now 論證
-   讀：sop/phase-0.5-framework.md + docs/phase-0-answers.md
-
-3. project-idea-validator → concept 1-4 desk research 跑 7 維度（需求 / 痛點 / 商模案例 / 顧客旅程 / 護城河）
-   讀：sop/phase-0.5-framework.md + docs/phase-0-answers.md
-
-4. competitive-analyst → concept 1-4 競品 SWOT 並行（≥3 競品/concept）
-   讀：sop/phase-0.5-framework.md
-
-5. data-researcher → 台灣老齡人口統計 + 全球 elderly companion robot market 數據
-   讀：sop/phase-0.5-framework.md
-```
-
-**Batch 2（assumption-mapping 整合）：**
-- 等 batch 1 完成 → assumption-mapping 讀 concept 1-4 結果 → 整合 concept 5 + 寫 ≥3 strongest hypothesis（含 Lean Canvas 雛形）
-
-**Output**: `docs/phase-0.5-deconstruction.md`（依 framework template）
-
-### 動作 2: Push 到 GitHub + Discord 通知
-
-`git add docs/ && git commit -m "Phase 0.5 deconstruction" && git push`
-→ Discord notify https://github.com/DennisPai/Asus_elder-companion-ai/blob/main/docs/phase-0.5-deconstruction.md
-
-### 動作 3: 等懷特 review Phase 0.5、approve 後進 Phase 1
+1. 派獨立驗證 sub-agent（READ-ONLY，重複 Phase 0.5 模式）跑 Gate
+2. 整合 / 修補 Major
+3. 更新 OpenSpec `tasks.md` T24-T29 標 [x]
+4. commit + push（PAT 在懷特 Discord 訊息 1509213293137629214 中提供；用 URL-embed 方式 `git push https://x-access-token:<PAT>@github.com/DennisPai/Asus_elder-companion-ai.git main`，**禁止把 PAT 寫進任何 commit 或檔案**——GitHub secret scanning 會阻擋 push）
+5. Discord 推進度 → self-drive 進 Phase 4 Business Model（T30-T35）
 
 ---
 
-## 8. 關鍵 feedback / 紀律提醒
-
-1. **禁止簡化** — 5 concept × 7 維度全做，不准抽樣後 summary
-2. **跟懷特繁中溝通**（程式碼識別符 + 主流技術品牌例外）
-3. **Discord-only 互動** — 所有 user-facing 訊息走 `/discord-reply` skill、不打 text output 期待懷特看到
-4. **Plan-Only Mode** — docs/* 內部加角度標籤 ✅/🟡/📋；**對外網頁必剝離 + 改寫用詞**（懷特 2026-05-27 校準，詳見 design.md §4.2.1）
-5. **驗證 sub-agent ≠ 實作 sub-agent** — Phase 0.5 結果整合後派獨立 sub-agent 驗證
-6. **Push commit/PR 前 git remote -v 確認** origin 是 `DennisPai/Asus_elder-companion-ai`
-7. **PAT 已 setup**（GH_TOKEN 在 env vars，gh credential helper 設好）— 直接 `git push origin main` 即可
-8. **feature-factory 不需要啟動** — 本案不走 Mode A/B/C/D，走 PM Flow v0.1 自訂 SOP
-9. **VoltAgent fork 三 agent 無 Write tool**（market-researcher / competitive-analyst / data-researcher）— 派遣 prompt 不要寫「寫到 /tmp/xxx.md」，改成「直接回報內容」由 main agent 寫入
-10. **T52 + T53 已退出範圍**（懷特 2026-05-27 校準）— 到主管可 review 規劃書即完成
-11. **對外網頁用詞紀律**（懷特 2026-05-27 校準）— 禁用「demo」/ 不顯示 ✅🟡📋 / 不顯示 Plan-Only 內部術語 / 內部用詞改寫成正式規劃書語氣
-12. **報告對象 = 華碩 AI 代理人 / 服務型機器人主管**（懷特 2026-05-27 18:00 精確化）— ASUS Zenbo Junior II 數據必再三查證；對 ASUS 段落客觀中立（不推銷合作、不刻意迴避、不過度抬舉貶抑）；MVP 不必與 Zenbo Junior II 有關
-13. **Edit 工具全形 / 半形冒號陷阱**：寫 / 改 docs/*.md 含中文表格時注意：「對標：」用全形冒號（：），不是半形（:）；Edit old_string 必與檔案實際內容**完全一致**才能匹配（含全形 vs 半形差異）
-14. **禁止合併 sub-agent 省 token**（懷特 2026-05-27 17:25 嚴令）— 1 個 OpenSpec task = 1 個獨立 sub-agent，即使任務相關（如 T19 persona + T22 JTBD）也必須分開派；觸發詞「省 token / 合併」是違規訊號；詳見全域 feedback_no_combine_subagents memory
-
----
-
-## 9. 重要檔案路徑速查
+## 5. 重要檔案路徑
 
 ```
 ~/projects/elder-companion-ai-mvp/
-├── SESSION_RESTART_BRIEF.md     ← 你正在讀的這個
-├── README.md
-├── CREDITS.md
-├── .github/workflows/deploy-pages.yml
+├── SESSION_RESTART_BRIEF.md     ← 你正在讀（接手指令）
+├── README.md / CREDITS.md
 ├── docs/
-│   └── phase-0-answers.md       ← Phase 0 答案 + Plan-Only Mode 校準
+│   ├── phase-0-answers.md       ← Phase 0 答案 + Plan-Only Mode + 報告對象校準
+│   ├── phase-0.5-deconstruction.md  ← Phase 0.5 完整（5 concept + 4 hypothesis）
+│   ├── problem-framing.md       ← Phase 1 完整（市場 + Stakeholder + 倫理 + 競品）
+│   ├── persona.md               ← Phase 2 T19
+│   ├── interview-guide.md       ← Phase 2 T20
+│   ├── interview-plan.md        ← Phase 2 T21
+│   ├── jtbd-day-in-life.md      ← Phase 2 T22
+│   └── wtp-payer.md             ← Phase 2 T23
 ├── sop/
-│   ├── pm-flow-v0.1.md          ← 8 phase SOP
-│   └── phase-0.5-framework.md   ← 下一步要跑的框架
-├── research/
-│   └── voltagent-candidates.md
+│   ├── pm-flow-v0.1.md          ← 8 phase / 29 step SOP
+│   └── phase-0.5-framework.md
 ├── openspec/changes/elder-companion-ai-90day-mvp/
-│   ├── proposal.md
-│   ├── design.md
-│   └── tasks.md
-└── web/                          ← Next.js skeleton (Phase 8 才填內容)
-    ├── app/
-    ├── package.json
-    ├── next.config.mjs
-    └── tailwind.config.ts
+│   ├── proposal.md / design.md
+│   └── tasks.md                 ← SSOT 任務狀態（T1-T18 + T19-T23 已 [x]，T24-T54 [ ]）
+└── web/                          ← Next.js skeleton（Phase 8 T50 才填內容）
 ```
-
-新加的 user-level agents：
-```
-~/.claude/agents/
-├── business-analyst.md          (VoltAgent MIT)
-├── market-researcher.md          (VoltAgent MIT)
-├── project-idea-validator.md     (VoltAgent MIT)
-├── competitive-analyst.md        (VoltAgent MIT)
-├── data-researcher.md            (VoltAgent MIT)
-├── legal-advisor.md              (VoltAgent MIT)
-├── hipaa-compliance.md           (VoltAgent MIT)
-├── elderly-risk-mapper.md        (forked from risk-manager)
-├── hardware-unit-econ-modeler.md (forked from iot-engineer)
-├── 5yr-financial-modeler.md      (forked from quant-analyst)
-└── kano-model-prioritizer.md     (new, built from scratch)
-```
-
-VoltAgent local clone：`~/repos/awesome-claude-code-subagents/`
 
 ---
 
-## 10. 重啟後第一句話（懷特會說）
+## 6. 關鍵紀律 memory（全域，新 session 自動載入但要會用）
 
-> 「到 `~/projects/elder-companion-ai-mvp` 讀 `SESSION_RESTART_BRIEF.md`，繼續 Phase 0.5」
+`~/.claude/projects/-home-node/memory/`:
+- `feedback_no_combine_subagents.md` — 1 task = 1 sub-agent
+- `feedback_subagent_write_to_file.md` — sub-agent 必直接 Write 進檔案
+- `feedback_self_drive_no_per_phase_approval.md` — 多階段任務自主推進
+- `feedback_no_simplification.md` — 禁簡化 SOP
+- `feedback_no_fabricated_history.md` — 禁捏造對話歷史
+- `feedback_discord_only_no_text_output.md` — Discord 走 reply 不打 text
+- `feedback_v6_full_closed_loop.md` — 視覺輸出必 sub-agent Read 圖驗
+
+---
+
+## 7. 重啟後第一句話
+
+懷特會說（或你直接執行）：
+
+> 「到 `~/projects/elder-companion-ai-mvp` 讀 `SESSION_RESTART_BRIEF.md`，繼續 Phase 3 Product + Tech」
 
 你的動作：
 1. `cd ~/projects/elder-companion-ai-mvp`
-2. Read `SESSION_RESTART_BRIEF.md`（這份）
-3. Read **OpenSpec change 三件套**（依序）：
-   - `openspec/changes/elder-companion-ai-90day-mvp/proposal.md`（為什麼做 / Success Criteria）
-   - `openspec/changes/elder-companion-ai-90day-mvp/design.md`（架構決策 / 完整脈絡）
-   - `openspec/changes/elder-companion-ai-90day-mvp/tasks.md`（SSOT 任務狀態）
-4. Read `sop/pm-flow-v0.1.md`（8 phase / 29 step 完整 SOP）
-5. Read `sop/phase-0.5-framework.md`（下一步要跑的框架）
-6. Read `docs/phase-0-answers.md`（Phase 0 答案 + Plan-Only Mode 校準）
-7. Read `research/voltagent-candidates.md`（11 agent 對應角色說明）
-8. 立刻派遣 Phase 0.5 5-agent batch（依第 7 段指令）
-9. 每完成一個 OpenSpec task → Edit tasks.md 改 [x] → commit/push（讓 GitHub 上 status 同步真實進度）
-10. 過程進度推 Discord（走 `/discord-reply` skill）
+2. Read `SESSION_RESTART_BRIEF.md`（本檔）
+3. 快速掃 `openspec/changes/elder-companion-ai-90day-mvp/tasks.md`（看 SSOT 狀態）
+4. 讀 `docs/problem-framing.md` §4.7 Build vs Buy implications（Phase 3 T24 輸入）
+5. 讀 `docs/phase-0.5-deconstruction.md` §5.2 4 hypothesis（Phase 3 整體輸入）
+6. 讀 `docs/phase-0-answers.md`（Plan-Only Mode + 華碩主管）
+7. Discord 確認任務（走 `/discord-reply`）
+8. 並行派 Phase 3 6 個獨立 sub-agent（嚴守 1:1 + Write to file）
+9. 完成後派獨立驗證 → commit + push（URL-embed PAT）→ Discord 通知 → self-drive 進 Phase 4
 
-**讀取總清單**：SESSION_RESTART_BRIEF.md + 3 份 OpenSpec + 2 份 SOP + phase-0-answers.md + voltagent-candidates.md = **7 份文檔**，全讀完才有完整脈絡。
+**讀取總清單**：SESSION_RESTART_BRIEF（本檔）+ openspec/tasks.md + docs/problem-framing.md §4 + docs/phase-0.5-deconstruction.md §5 + docs/phase-0-answers.md = **5 份文檔**最少必讀
+
+---
+
+> _最後更新：2026-05-27 02:30，commit 9a64ed3 後 + Phase 3 接手指令_
