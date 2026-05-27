@@ -19,10 +19,10 @@
 - [x] T13 push GitHub + Discord 通知懷特 review
 
 ## Phase 1: Problem Framing（W1）
-- [ ] T14 TAM/SAM/SOM 量化 + Why Now 論證 → docs/problem-framing.md §1
-- [ ] T15 Stakeholder Mapping → docs/problem-framing.md §2
-- [ ] T16 Ethical Risk + 紅線清單 → docs/problem-framing.md §3
-- [ ] T17 競品 deep dive (PARO / ElliQ / Mabu / ZenboJr) → docs/problem-framing.md §4
+- [x] T14 TAM/SAM/SOM 量化（三向交叉）+ Why Now ≥5 趨勢 → docs/problem-framing.md §1
+- [x] T15 Stakeholder Mapping（5 大類 × 19 子分類 + Power×Interest + Influence Map + Engagement Timeline + Cultural）→ docs/problem-framing.md §2
+- [x] T16 Ethical Risk + 紅線清單（10 條 × 8 維度 + 7 LLM 絕對紅線 + 危機 SOP）→ docs/problem-framing.md §3
+- [x] T17 競品 deep dive 4 家（PARO / ElliQ / Mabu 退場確認 / ZenboJr）+ Build vs Buy 4 層 → docs/problem-framing.md §4
 - [ ] T18 W1 review gate → 懷特 approve 才進 Phase 2
 
 ## Phase 2: Customer Discovery（W2-3）
