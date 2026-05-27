@@ -2,5 +2,48 @@
 @tailwind components;
 @tailwind utilities;
 
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@300;400;500;700&display=swap');
+
 html { scroll-behavior: smooth; }
-body { @apply bg-slate-50 text-slate-900 antialiased; }
+body { @apply bg-slate-50 text-slate-900 antialiased; font-family: 'Noto Sans TC', system-ui, -apple-system, sans-serif; }
+
+.section-divider {
+  @apply border-t border-slate-200 my-0;
+}
+
+.stat-number {
+  font-size: 3rem;
+  font-weight: 700;
+  color: #1e40af;
+  line-height: 1;
+}
+
+.badge-verified {
+  @apply inline-flex items-center px-2 py-0.5 rounded text-xs font-medium bg-green-100 text-green-800;
+}
+
+.badge-design {
+  @apply inline-flex items-center px-2 py-0.5 rounded text-xs font-medium bg-amber-100 text-amber-800;
+}
+
+.badge-pending {
+  @apply inline-flex items-center px-2 py-0.5 rounded text-xs font-medium bg-slate-100 text-slate-600;
+}
+
+.nav-fixed {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 50;
+  background: rgba(30, 64, 175, 0.97);
+  backdrop-filter: blur(4px);
+}
+
+.section-full {
+  @apply py-20 px-6;
+}
+
+.container-max {
+  @apply max-w-6xl mx-auto;
+}

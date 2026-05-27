@@ -4,16 +4,20 @@ const config: Config = {
   content: [
     './app/**/*.{ts,tsx,mdx}',
     './components/**/*.{ts,tsx}',
-    './docs/**/*.{md,mdx}',
   ],
   theme: {
     extend: {
       colors: {
-        primary: { DEFAULT: '#0f766e', dark: '#0d5d57' },
-        accent: { DEFAULT: '#f59e0b', dark: '#d97706' },
+        brand: {
+          blue: '#1e40af',
+          'blue-light': '#2563eb',
+          orange: '#ea580c',
+          warm: '#fafaf9',
+          gray: '#475569',
+        },
       },
       fontFamily: {
-        sans: ['system-ui', '-apple-system', 'Noto Sans TC', 'sans-serif'],
+        sans: ['Noto Sans TC', 'system-ui', '-apple-system', 'sans-serif'],
       },
     },
   },

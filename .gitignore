@@ -13,3 +13,11 @@ build/
 coverage/
 .cache/
 *.tsbuildinfo
+
+# Internal Plan-Only working docs — not for public repo HEAD (per 懷特 2026-05-27 Phase 8 紀律)
+# 歷史 commit 仍存留 git history（已 published 不可逆），但 HEAD 排除 = 主管查看 repo listing 不會見到
+# docs/* 保留 tracked（substantive PM 規劃內容，作為 GitHub Page 之外的二級參考）
+/openspec/
+/sop/
+/SESSION_RESTART_BRIEF.md
+.claude/
