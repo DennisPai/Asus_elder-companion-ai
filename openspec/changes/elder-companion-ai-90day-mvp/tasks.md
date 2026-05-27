@@ -56,12 +56,13 @@
 - [x] T38 Sprint 4 規格書（W11-W12 / 2 週 + Phase 6 W1 過渡）→ docs/sprint-4-spec.md（924 行；5-10 家庭 + 1-2 機構閉迴路測試 + PMF 5 框架）
 - 獨立驗證 sub-agent CONDITIONAL PASS（5 Major / 6 Minor / 4 Nice-to-have）；5 Major 全修：M1 Sprint 週次 SSOT 對齊 decision-w6 §7.1 / M2 T38 「Sprint 1-3 已驗證」3 處改規劃 / M3 T37「demo」2 處改「內部 review」/ M4 T36 內部時程統一 W5-W8 / 4 週 / 28 天 / M5 預算累計校準 NT$416-538 萬（對齊 sprint-3-spec + sprint-4-spec 自報實際）
 
-## Phase 6: Pilot + Validation（W9-10）
-- [ ] T39 Pilot Program 招募 → docs/pilot-recruitment.md
-- [ ] T40 MoU 簽訂 → docs/pilot-mou.md
-- [ ] T41 4 週 closed beta 執行 + 每週量測
-- [ ] T42 PMF 量測（Sean Ellis Test + retention curve + NPS）→ docs/pmf-report.md
-- [ ] T43 法規 Soft Check（PDPA / 醫療法）→ docs/regulatory-check.md
+## Phase 6: Pilot + Validation 設計書（W13-W24，Plan-Only 校準）— DONE 2026-05-27
+- [x] T39 Pilot Program 招募設計 → docs/pilot-recruitment.md（844 行；5 面向招募 + 12 週 funnel + 預算 NT$95-160 萬）
+- [x] T40 MoU template → docs/pilot-mou.md（671 行；12 clauses + 3 版本機構/保險/政府 + 律師費 NT$30-55 萬）
+- [x] T41 4 週 closed beta 設計 → docs/closed-beta-design.md（800 行；W21-W24 4 週 + 5 框架 PMF + Operator 升級 + 預算 NT$170-260 萬）
+- [x] T42 PMF 量測機制設計 → docs/pmf-report.md（944 行；Sean Ellis + Retention + NPS + HEART + AARRR + NSM 主動互動次數 + Pivot trigger 4 條）
+- [x] T43 法規 Soft Check → docs/regulatory-check.md（612 行；PDPA + AI 基本法 + 消保法 + 醫療法 + 老人福利法 + 律師費 NT$70-110 萬）
+- 獨立驗證 sub-agent CONDITIONAL PASS（4 Major / 7 Minor / 4 Nice-to-have）；4 Major 全修：M1 T40 戶數 50-100 → 15-20（對齊 T39+T41 規模）/ M2 T41 D30 ≥70% → ≥60%（良好）+ ≥70%（stretch，對齊 T42 §1.2）/ M3 T39 Sprint 4 期間 W11-W13 → W11-W12（SSOT decision-w6.md §7.1）/ M4 T43 PDPA 2025/11 → 2025/12 修訂版（立院 11 月通過）
 
 ## Phase 7: Pitch Prep（W10-12）
 - [ ] T44 Why Us + 護城河 deep dive → docs/why-us-moat.md
