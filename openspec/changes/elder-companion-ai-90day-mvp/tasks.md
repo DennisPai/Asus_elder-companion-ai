@@ -25,12 +25,12 @@
 - [x] T17 競品 deep dive 4 家（PARO / ElliQ / Mabu 退場確認 / ZenboJr）+ Build vs Buy 4 層 → docs/problem-framing.md §4
 - [ ] T18 W1 review gate → 懷特 approve 才進 Phase 2
 
-## Phase 2: Customer Discovery（W2-3）
-- [ ] T19 3 persona 草稿 → docs/persona.md
-- [ ] T20 設計濃縮 Mom Test ≤8 題 訪談大綱 → docs/interview-guide.md
-- [ ] T21 實際訪 5-8 子女 + 3-5 長者 + 2-3 長照人員 → docs/interview-log.md
-- [ ] T22 JTBD + Day-in-the-Life mapping → docs/jtbd-day-in-life.md
-- [ ] T23 WTP + 付款人辨識 → docs/wtp-payer.md
+## Phase 2: Customer Discovery（W2-3，Plan-Only 校準）
+- [x] T19 3 persona 假設草稿 (10 維度 + 長者方 vignette + 共通需求) → docs/persona.md
+- [x] T20 設計濃縮 Mom Test ≤8 題訪談大綱 (3 群組 × 含倫理校驗) → docs/interview-guide.md
+- [x] T21 訪談招募計畫 (5 面向) + 預期 Persona 假設清單 → docs/interview-plan.md（Plan-Only 校準，原 T21 實際訪談已改設計版）📋
+- [x] T22 JTBD + Day-in-the-Life mapping (3 persona × Functional/Emotional/Social) → docs/jtbd-day-in-life.md
+- [x] T23 WTP 範圍假設 (4 framework 交叉) + 付款人辨識 (4 類) → docs/wtp-payer.md
 
 ## Phase 3: Product + Tech（W3-4）
 - [ ] T24 Build vs Buy 決策 → docs/build-vs-buy.md

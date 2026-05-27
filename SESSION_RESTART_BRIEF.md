@@ -182,6 +182,7 @@ OpenSpec change `elder-companion-ai-90day-mvp/` 有 3 份文檔，**全部都要
 11. **對外網頁用詞紀律**（懷特 2026-05-27 校準）— 禁用「demo」/ 不顯示 ✅🟡📋 / 不顯示 Plan-Only 內部術語 / 內部用詞改寫成正式規劃書語氣
 12. **報告對象 = 華碩 AI 代理人 / 服務型機器人主管**（懷特 2026-05-27 18:00 精確化）— ASUS Zenbo Junior II 數據必再三查證；對 ASUS 段落客觀中立（不推銷合作、不刻意迴避、不過度抬舉貶抑）；MVP 不必與 Zenbo Junior II 有關
 13. **Edit 工具全形 / 半形冒號陷阱**：寫 / 改 docs/*.md 含中文表格時注意：「對標：」用全形冒號（：），不是半形（:）；Edit old_string 必與檔案實際內容**完全一致**才能匹配（含全形 vs 半形差異）
+14. **禁止合併 sub-agent 省 token**（懷特 2026-05-27 17:25 嚴令）— 1 個 OpenSpec task = 1 個獨立 sub-agent，即使任務相關（如 T19 persona + T22 JTBD）也必須分開派；觸發詞「省 token / 合併」是違規訊號；詳見全域 feedback_no_combine_subagents memory
 
 ---
 
