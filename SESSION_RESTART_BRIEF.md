@@ -54,7 +54,7 @@
 | 1 | 產業 | **B2C** |
 | 2 | Target Audience | **長者的子女**（buyer + decision maker；長者本人是 end user 但不是付款人）|
 | 3 | 預算 | **不限**，但 Plan-Only Mode（不能假設要做完訪談/招募才寫計畫）|
-| 4 | Demo 對象 | **公司內部主管 1 位** |
+| 4 | Demo 對象 | **華碩（ASUS）負責 AI 代理人 / 服務型機器人主管 1 位**（2026-05-27 18:00 懷特精確化）|
 | 5 | Geo | **台灣 only**（法規 narrow 到 PDPA + 衛福部 + 經濟部）|
 
 ---
@@ -180,6 +180,8 @@ OpenSpec change `elder-companion-ai-90day-mvp/` 有 3 份文檔，**全部都要
 9. **VoltAgent fork 三 agent 無 Write tool**（market-researcher / competitive-analyst / data-researcher）— 派遣 prompt 不要寫「寫到 /tmp/xxx.md」，改成「直接回報內容」由 main agent 寫入
 10. **T52 + T53 已退出範圍**（懷特 2026-05-27 校準）— 到主管可 review 規劃書即完成
 11. **對外網頁用詞紀律**（懷特 2026-05-27 校準）— 禁用「demo」/ 不顯示 ✅🟡📋 / 不顯示 Plan-Only 內部術語 / 內部用詞改寫成正式規劃書語氣
+12. **報告對象 = 華碩 AI 代理人 / 服務型機器人主管**（懷特 2026-05-27 18:00 精確化）— ASUS Zenbo Junior II 數據必再三查證；對 ASUS 段落客觀中立（不推銷合作、不刻意迴避、不過度抬舉貶抑）；MVP 不必與 Zenbo Junior II 有關
+13. **Edit 工具全形 / 半形冒號陷阱**：寫 / 改 docs/*.md 含中文表格時注意：「對標：」用全形冒號（：），不是半形（:）；Edit old_string 必與檔案實際內容**完全一致**才能匹配（含全形 vs 半形差異）
 
 ---
 

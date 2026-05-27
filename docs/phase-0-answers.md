@@ -11,7 +11,7 @@
 | 1 | 產業 | **B2C** | agent routing 走 B2C App + Hardware；revenue model narrow 到 B2C 適用選項 |
 | 2 | Target Audience | **長者的子女**（buyer + decision maker；長者本人是 end user 但不是付款人） | persona 主軸是子女（中年 / 北漂 / 在地照顧）、訪談主角是子女、WTP 量測對子女 |
 | 3 | 預算 | **不限**，但 **計畫不能假設要做完訪談或招募才能寫計畫** | ⚠️ **Plan-Only Mode** — 所有 deliverable 是 desk research + 規劃 |
-| 4 | Demo 對象 | **公司內部主管 1 位** | pitch deck tone 走「向主管說明 + 取得 go/no-go」、不是 VC pitch |
+| 4 | Demo 對象 | **華碩（ASUS）負責 AI 代理人 / 服務型機器人主管 1 位**（懷特 2026-05-27 18:00 精確化）| pitch deck tone 走「向主管說明 + 取得 go/no-go」、不是 VC pitch；**避免 ASUS Zenbo Junior II 數據錯誤**（主管是該產品線 owner）；對 ASUS 相關段落用詞**客觀中立**（不過度推銷 OEM/合作 / 不刻意迴避競品比較）|
 | 5 | Geo | **台灣 only** | 法規只 narrow 到 台灣 PDPA / 衛福部 / 經濟部商業司；競品 deep dive 含國際 best practice 但 SAM 算台灣 |
 
 ## ⚠️ Plan-Only Mode（關鍵校準）
@@ -49,7 +49,18 @@
 ### GitHub Page 對外定位
 - **不是**「我們已經跑完 90 天 MVP 看結果」
 - **不是**「demo」（禁用此字眼）
-- **是**「**規劃 3 個月落地的長輩互動陪伴機器人 × AI Brain MVP 與商業模式**規劃書」，給公司主管 review
+- **是**「**規劃 3 個月落地的長輩互動陪伴機器人 × AI Brain MVP 與商業模式**規劃書」，給**華碩（ASUS）負責 AI 代理人 / 服務型機器人主管** review（2026-05-27 18:00 懷特精確化）
+
+### ⚠️ 報告對象特殊考量（華碩 AI 代理人 / 服務型機器人主管）
+
+1. **ASUS Zenbo Junior II 數據必再三查證**：主管是該產品線 owner，數據錯誤 = 致命專業性問題
+2. **客觀中立呈現 ASUS 相關段落**：
+   - ❌ 禁「ASUS 是潛在合作對象」「OEM / licensing 合作可能」等推銷型語氣
+   - ❌ 禁過度抬舉或貶抑 Zenbo Junior II
+   - ❌ 禁刻意迴避競品比較（主管期待專業競品分析）
+   - ✅ 客觀呈現「ASUS Zenbo Junior II 市場定位 + 我們 MVP 的差異化空間」
+   - ✅ 引用 ASUS 官方公告 / 媒體報導為主，避免主觀評論
+3. **MVP 不必與 Zenbo Junior II 有關**（不加分不扣分）— 規劃書是「我們對長者陪伴市場的看法 + MVP 設計」，不是「請 ASUS 合作」
 
 ### docs/* 內部仍保留三色標籤（供我們 + 懷特 review 用）
 

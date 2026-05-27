@@ -13,7 +13,7 @@ Phase 1 深化 Phase 0.5 規劃，4 個面向結論：
 1. **§1 市場（TAM/SAM/SOM 深化）**：TAM 全球 USD 2.09-3.14B（Healthcare Companion Robots，5 source 交叉確認）→ USD 5.48-13.92B（2030/34，CAGR 17-18%）；TAM 台灣 NT$3,000 億健康福祉產業（工研院）；SAM 台灣三向交叉驗證 NT$60-70 億中位數（Top-down USD 257M ≈ Bottom-up NT$66 億 ≈ ElliQ 類比 SOM）；Why Now 6 個趨勢（超高齡臨界 + LLM/邊緣推理 BOM 雙門檻 + 長照 3.0 三階段 + fast-follower 窗口 + 家庭結構崩解 + 65% 長者願用 AI）。
 2. **§2 利益關係人（Stakeholder Mapping 深化）**：5 大類 × 19 個子分類；Power × Interest 2×2 + Influence Map 15 條 + Engagement Timeline W0-W12 + Cultural Considerations 6 面向（三代同堂崩解 / 性別照顧 / 親子權力 / 台語認同 / 宗教節慶 / 數位落差）；主動補充「照服員雙重角色陷阱」+「子女 onboarding ≤10 分鐘 hard constraint」。
 3. **§3 倫理風險（Ethical Risk + Safety 紅線）**：vulnerable population framework 三支柱；7 條 LLM 絕對紅線（醫療/投藥/急救/法律/投資/心理治療/臨終）+ 10 條紅線深化（7 既有 + 3 補充 Power Asymmetry / Surveillance Creep / Social Replacement）× 8 維度；台灣法規對應 ≥20 條具體條文；Phase 1-8 倫理檢核點 + 危機處理 SOP 黃金 8 小時。
-4. **§4 競品 deep dive**：PARO（醫療 B2B 認證路線、B2C 高定價死）/ ElliQ（B2G 政府通路 + LLM ROE 混合 + 無緊急功能缺口）/ Mabu（**2024/11 確認退場** + 非 LLM 腳本死 + 單一客戶依賴致命）/ Zenbo Junior（台灣本土通路 + 迭代停滯 + ASUS OEM 合作潛力）；4-grid matrix 我們定位「軟體中心 + B2C DTC 先行 + B2B2C 並行」；Build vs Buy 4 層輸入給 Phase 3 T24。
+4. **§4 競品 deep dive**：PARO（醫療 B2B 認證路線、B2C 高定價死）/ ElliQ（B2G 政府通路 + LLM ROE 混合 + 無緊急功能缺口）/ Mabu（**2024/11 確認退場** + 非 LLM 腳本死 + 單一客戶依賴致命）/ Zenbo Junior I+II（2024-2026 再三查證：Junior II 轉型 Maestro 系統節點 / 2024/01 QAP 終止 / B2B 醫院直採 / 無台語 / 客語）；本案差異化空間在台語對話 + 月費訂閱 + 子女 dashboard + 長照 3.0 補貼路徑 + B2C DTC；4-grid matrix 我們定位「軟體中心 + B2C DTC 先行 + B2B2C 並行」；Build vs Buy 4 層輸入給 Phase 3 T24。
 
 ---
 
@@ -766,7 +766,8 @@ WebFetched / WebSearched ≥25 source（前 7 條：內政部 / 中央社 / 主�
 |---|---|---|
 | 軟體中心 × B2B | **Mabu**（醫院 / 保險慢病管理）| 已退場 2024/11 |
 | 軟體中心 × B2C/B2G | **ElliQ**（B2G 政府 + B2C DTC）| 最接近我們 |
-| 硬體中心 × B2C | **Zenbo Junior**（教育 / 家庭 NT$24.9K）| AI 弱、迭代停 |
+| 硬體中心 × B2B | **Zenbo Junior II**（醫院 Maestro 節點，2025/12 系統發布）| 已從消費型轉醫院 B2B；無台語 / 客語、無 SLAM、無月費訂閱、無 B2C 通路 |
+| 硬體中心 × B2C | **Zenbo Junior I**（2017 教育 / 家庭 NT$24.9K）| 2024/01 QAP 終止，B2C 消費型逐步退場 |
 | 硬體中心 × B2B | **PARO**（醫院 / 機構 USD 6,100）| FDA Class II |
 | **我們**（軟體中心 + B2C DTC 先行 + B2B2C 並行）| **台語 + 子女 dashboard 是空白軸** | — |
 
@@ -846,31 +847,70 @@ WebFetched / WebSearched ≥25 source（前 7 條：內政部 / 中央社 / 主�
 
 **對我們**：✅ 抄 Kaiser 模式（台灣對標：國泰 / 富邦 / 南山長照險 60-80 萬保戶池 + 長照 3.0 補貼雙軌）；❌ 不單一客戶依賴（同時談 ≥3 家）；❌ 不延遲 LLM 整合（Day 1 整合 GPT-4o / Claude）；❌ 不大量備貨（首批 50-100 台預訂制）；🎯 差異化：B2C + B2B 雙軌並行（Hyp A + B）+ Wizard-of-Oz 平板（90 天零庫存風險）
 
-### 4.4 ASUS Zenbo Junior（台灣 ASUS，2016~）
+### 4.4 ASUS Zenbo Junior I / II（台灣 ASUS，2016~；2024-2026 最新進展再三查證 ✅）
 
-**公司**：Jonney Shih（ASUS 創辦人 CEO）；ASUS AI & IoT 部門主導；台北總部；2357.TW（ASUS 市值 NT$2,500 億）；Zenbo 為內部事業單位非獨立實體
+> 本段於 2026-05-27 由 competitive-analyst 針對 ASUS 官方公告 + 媒體報導再三查證更新，引用 ≥17 個 source（ASUS Pressroom / Zenbo 官網 / TechNews / DigiTimes / 台智雲官網 / ARAIC 官網 / ASUS 2024 年報等）
+
+**公司**：Jonney Shih（ASUS 創辦人 / 董事長）；ASUS AI & IoT 部門 + ASUS Robotics & AI Center（ARAIC）；台北總部；2357.TW；Zenbo 屬內部事業單位非獨立實體。**2024 年底 ASUS 正式宣布「All In AI」策略**，停止新智慧型手機研發、全力轉向商用 PC + Physical AI（含機器人、智慧眼鏡）
 
 **產品**（Zenbo Junior I, 2019）：高 51cm / 9.5 kg / 圓形可移動底盤 / 7 吋 IPS 觸控（臉部）/ 8MP 鏡頭 / 4 麥克風陣列 / 電池 2-3 hr / Android；**AI 對話弱**（非 LLM，rule-based + 固定指令樹）；繁中 + 英文（**台語不支援**）；BSMI / CE / **CES 2019 Innovation Award**
 
-**Zenbo Junior II（2024，Healthcare 導向）**：高 31.5cm / 2.75 kg / 6 吋 LCD / Gen AI 整合 / 連接醫院 HIS（藥物提醒）/ B2B 醫院主軸
+**Zenbo Junior II（2024~，Healthcare 導向，2025 Maestro 系統節點化）**：
+- 規格：18.5×18.5×31.5cm / 2.75kg / 6 吋 LCD / Android 10 / 4GB RAM / 32GB / 電池 5-6 hr / Wi-Fi 802.11ac / BT 5.0 / 8MP 鏡頭 / **無 SLAM**（不能自主建圖導航）
+- Gen AI 整合：官方稱「AI 感知技術 + 自然語言對話 + 理解並記住對話脈絡」；**具體使用哪個 LLM 官方未揭露** 🟡（推測整合台智雲 FFM 或第三方 API，但無證據）
+- 端側 vs 雲端推理：🟡 官方未揭露
+- 語言：繁中 + 英文（**台語 + 客語不支援**，無公開計畫）
 
-**商模**：Zenbo Junior NT$24,900（2017 預售）；Junior II 價格未公告（B2B 醫院優先）；**無月費訂閱**；通路 ASUS 官網 + 燦坤 / 全國電子 + 蝦皮 / momo（二手）
+**Maestro 多機器人協同系統（2025/12 Healthcare+ Expo 首次正式發布）⭐ 重要新發展**
+- 定位：**台灣首個「智慧醫療指揮中樞」**（Intelligent Healthcare Orchestration Hub）
+- 三件套：(a) **Zenbo Jr. II** 陪伴型機器人（病患導覽 / 衛教 / 問答）/ (b) **Kairo** 服務型自主移動機器人 AMR（物流 / 臨床支援）/ (c) **Sage** 虛擬醫療代理人軟體
+- 整合：HIS / NIS + OmniCare+ 遠距健康 + HealthGo 病患入口
+- **戰略意義**：ASUS 將 Junior II 從「獨立教育型 / 消費型機器人」轉型為「醫院 AI 基礎設施節點」，Junior II 在 Maestro 中是「陪伴型 UI 前端」非系統核心，不再作為獨立消費產品推廣
 
-**Traction**：銷量未公開；二手市場 NT$3,000-8,000 拋售（原價 NT$24,900）顯示棄用率高；Gandau Hospital（台北）+ 林口長庚 Healthy Taiwan 平台 pilot；Healthcare+ Expo 每年展出；CES 2019 + Computex 2017 Best Choice + Red Dot 2017
+**商模 / 通路**：B2B 醫院 / 機構直採（**價格未公開、需洽詢 ASUS 台灣商業部門**）；**無月費訂閱**；Junior I 仍在二手通路（Carousell / 蝦皮 NT$3K-8K）；Junior II **無零售通路**（不在燦坤 / 全國電子 / momo / 蝦皮）
 
-**評價（3 source + 間接）**：
-1. Fortune 2016：「令人印象深刻但時機似乎早了」；噪音環境語音識別不穩定
-2. 蝦皮二手市場：大量 NT$3K-8K 拋售 = 棄用率高 🟡
-3. ASUS 開發者社群（2020 後活躍度崩潰）：SDK 更新緩慢、AI 不夠自然、依賴 ASUS 雲端
+**Traction 2025 最新**：
+- Gandau Hospital 台北 iHARP 平台（與陽明交大共同研發，2018~）
+- **新北市立聯合醫院**（2025 台灣首家導入 ASUS xHIS 次世代 HIS 並整合 Maestro 機器人系統）⭐
+- **台北榮民總醫院**（2025 ASUS Clinical AI Assistant 部署）⭐
+- 台大醫院 + 遠東紀念 + 中國醫大附院 + 高雄榮總 等 ~60 家機構部署 **EndoAim**（AI 內視鏡，**非 Zenbo**）
+- 2025/12/4-7 Healthcare+ Expo 台北南港展覽館 1 館 4F M519a 展位，發布 Maestro
+- 林口長庚「Healthy Taiwan」平台：🟡 2018-2019 舊資料，2024-2026 是否仍持續未確認
 
-**失敗教訓**：
-1. **2019 後迭代停滯**（CES Award 後 ASUS 顯然未持續投入；主業 PC/筆電，Zenbo 副業邊緣化）
-2. AI 能力遠落後宣傳（「演示好 vs 實際用好」差距嚴重）
-3. **B2C + B2B 定位模糊**（孩子玩伴 + 老人 + 程式教育三場景 = 沒一個 PMF）
-4. **無訂閱收入 = 無持續資金投入 AI**（vs ElliQ 月費飛輪）
-5. **未進長照補貼採購清單**（BSMI 電子認證 ≠ 醫療器材長照補貼資格）
+**台智雲 + Formosa Foundation Model（FFM）整合脈絡**：ASUS 旗下子公司台智雲（TaiZhiYun / TWS）開發 FFM 為台灣本土第一個大規模繁體中文 LLM（2023~）；ASUS + 台智雲 + ASUS Cloud 與長庚紀念醫院合作建構醫院 AI 推論雲（骨質疏鬆 / 心室功能 / 急診氣胸輔助診斷）；🟡 Zenbo Junior II 是否採用 FFM 未公開確認
 
-**對我們**：✅ 評估 ASUS OEM / licensing 合作（Phase 3 T24 議題：他們硬體 + 通路 + BSMI 路徑成熟，我們 AI Brain 強）；❌ 不全場景通吃（專注長者陪伴一個 ICP）；❌ 不做硬體買斷一次性（月費訂閱 = 持續資金 + NPS 壓力 + 強迫 improve）；🎯 差異化：訂閱模式 + 子女 dashboard + Healthcare+ Expo 展出 + 長照 3.0 補貼名單同步申請（W4-6 接觸衛福部長照司）
+**ARAIC（ASUS Robotics & AI Center）**：台北設立的研究中心，聚焦 Robotics / AI / Cyber-Physical / Industrial Metaverse。2026/03 NVIDIA GTC 主導 **ASUS Ascent GX10 + Hugging Face Reachy Mini** embodied AI 研究平台合作（**研究工具，非 Zenbo 商業產品線**——兩條軌道）
+
+**QAP 服務終止事件（2024/01）⚠️**：ASUS 公告 Zenbo Junior I + II 的 **QAP（問答平台）功能即日起終止服務**，停止所有更新與系統維護。為首個針對 Junior II 的公開服務縮減聲明，顯示 ASUS 策略是「淘汰獨立消費型功能 → 轉向 B2B 醫院整合型部署」的路線調整
+
+**評價（2024-2026 最新）**：
+- 獨立媒體（Engadget / iThome / DigiTimes 等）**無 2024-2026 Junior II 用戶評測**
+- Mobile01 / Dcard / PTT 2024-2026 Junior II **查無評測**；Zenbo 原版（2017-2018）有 Mobile01 評測「家庭氛圍改善但互動生硬久了會膩」
+- Carousell + 蝦皮 Junior I 二手 NT$3K-8K 仍流通（棄用率問題持續）
+- 2024 QAP 終止後 ZenTalk 論壇未見大規模用戶抗議（推測 B2B 用戶量體小）
+- 🟡 整體 B2C 用戶實證評價缺乏
+
+**TechNews / Tweaktown 2024 Jonney Shih 公開論述**：
+- 2024/12 年終宴：ASUS 內部「人形機器人計畫」進展「如火如荼」；AI 策略「從 Super Brain 到 Tiny Brain」+「多 agent 應用、分散式部署」
+- 2025/01 DigiTimes：「All In AI」策略，停 smartphone 全力 Physical AI
+- 2025 Healthcare+ Expo（ASUS COO Joe Hsieh 主講）：「今年正式完成 agent-based AI 與醫療機器人的研發部署」
+- **重要校準**：Shih 的論述是 **ASUS 自身策略聲明（自建 AI Brain）**，**不是「在尋找外部 AI Brain 合作夥伴」**（公開資訊不支持此延伸解讀）
+
+**ASUS Zenbo Junior II 競品市場定位（客觀中立陳述）**：
+- 定位：**B2B 醫院 Maestro 系統節點**（陪伴型前端 UI）
+- 語言支援：繁中 + 英文（無台語 / 無客語）
+- 商模：B2B 醫院直採一次性 + 無月費訂閱
+- 自主導航：無 SLAM（限定固定 / 半固定空間）
+- B2C 長照補貼申請路徑：截至 2026/05 查無進入長照 3.0 智慧輔具補貼名單紀錄
+
+**本案規劃書對應差異化空間**（客觀呈現，非合作 pitch）：
+- 台語 / 客語對話支援
+- 月費訂閱架構（無一次性高門檻 + 持續 AI 研發資金）
+- 子女端 dashboard（ElliQ / Zenbo Junior II 均缺失此功能）
+- 長照 3.0 智慧輔具補貼名單申請路徑（W4-6 衛福部長照司接觸）
+- B2C DTC 直接面向長者家庭服務設計（vs Junior II 醫院 B2B 節點化）
+
+🟡 本段所有對比為基於 2024-2026 公開資訊 desk research；Junior II 實際部署台數、Gen AI 技術細節、Maestro 系統內 Junior II 角色演進等需 Phase 2 業界訪談確認。
 
 ### 4.5 失敗教訓總表（4 + 4 補充 = 8 個失敗點 → 如何避免）
 
@@ -893,7 +933,8 @@ WebFetched / WebSearched ≥25 source（前 7 條：內政部 / 中央社 / 主�
 | PARO | 1993 R&D | 2004 商業化 | 仍運營（7K 台 30 國）| R&D → 商業化 11 年；學術路線代價（Wizard-of-Oz 跳過）|
 | ElliQ | 2016 | 2022 商業上市 | 2026 進日本 | 成立 → 上市 6 年；$85M 仍需 6 年；90 天 MVP = 假設驗證 |
 | Mabu | 2014 | 2019 Kaiser 合作 | 2024/11 退場 | Kaiser → 退場 5 年；B2B 醫療規模化 3-5 年；資金不夠撐這段 = 退場 |
-| Zenbo | 2016 Computex | 2017 上市 | 2019 後迭代停滯 | 3 年窗口：大公司副業若 3 年內無 traction → 內部優先級被擠掉 |
+| Zenbo I | 2016 Computex | 2017 上市 | 2019-2024 消費型逐步退場（2024/01 QAP 終止）| Junior I：B2C 消費型 3 年窗口效應 |
+| Zenbo II | 2024 | 2024-2025 醫院 pilot | Maestro 系統節點化（2025/12 發布）| Junior II：轉型 B2B 醫院 Maestro 節點，放棄 B2C 獨立產品路線 |
 
 **我們的 timing 目標**：
 - 90 天：Wizard-of-Oz + 10-20 pilot 家庭（假設驗證）
@@ -908,7 +949,7 @@ WebFetched / WebSearched ≥25 source（前 7 條：內政部 / 中央社 / 主�
 - ❌ 全自製（PARO 10 年代價，90 天不可行）
 - ✅ **Wizard-of-Oz 平板（90 天 MVP 唯一選擇）**
 - ✅ **ODM 台灣廠（H2 主路線，鴻海 / 廣達 / 仁寶生態）**
-- 🟡 **ASUS Zenbo OEM / licensing（Phase 3 評估，AI Brain SaaS + ASUS 硬體 + 醫院通路 分工合作）**
+- 🟡 **ASUS Zenbo Junior II 競品定位參考**：Junior II 在 ASUS Maestro 系統內已明確定位為 B2B 醫院陪伴節點（無 SLAM / 無台語 / 無月費訂閱 / 無 B2C 通路）；與本案 B2C 長者居家陪伴目標市場不重疊；Phase 3 Build vs Buy 評估時可參考 ASUS 公開的台灣 ODM 供應鏈路徑（鴻海 / 廣達 / 仁寶生態），不涉及與 ASUS 的具體合作假設
 - ❌ 中國 OEM（PDPA 跨境 + 資安政府禁用）
 
 **AI Brain**：
@@ -933,7 +974,7 @@ WebFetched / WebSearched ≥25 source（前 7 條：內政部 / 中央社 / 主�
 ### 4.8 主動補充（北極星）
 
 1. **Mabu 退場戰略含義**：Kaiser 系統內「AI 慢病管理」用戶空缺。台灣健保署「居家醫療」+ 各保險公司慢病管理目前空白 = Hyp C 直接機會 + 比 Mabu 啟動時技術更成熟（LLM 已可用）
-2. **ASUS 合作可能性應入 Phase 3 T24**：Zenbo Junior II 已有台灣醫院通路但 AI 弱；我們有 AI Brain 但無通路。「ASUS 硬體 + 我們 AI Brain SaaS」OEM/white-label 比競爭更快。Jonney Shih AI Brain 演講顯示 ASUS 在積極找 AI Brain 合作夥伴
+2. **ASUS Zenbo Junior II 競品定位（客觀更新，2024-2026 再三查證）**：Junior II 已轉型為 ASUS Maestro 系統內的 B2B 醫院陪伴節點（2025/12 Healthcare+ Expo 正式發布），語言僅繁中 + 英文（無台語 / 客語），無 SLAM 自主導航，無月費訂閱，B2C 長者居家補貼名單未申請；2024/01 QAP 功能終止顯示 ASUS B2C 消費型 Zenbo 已退場。Jonney Shih 公開論述（2024/12 + 2025/01 + 2025 Healthcare+ Expo）一致顯示 ASUS 走「自建 AI Brain + Physical AI All In」策略，**並非「在尋找外部 AI Brain 合作夥伴」**（公開資訊不支持此延伸解讀）。**本案 B2C 長者居家市場與 Junior II 醫院 B2B 不重疊**，市場切片明確差異化（非合作假設）
 3. **ElliQ Kanematsu 日本合作 2025/10**：2026 才進日本，**台灣優先級極低 → 台灣本土玩家先佔位窗口 3-5 年完全開放**
 
 ### 4.9 Coverage Matrix
