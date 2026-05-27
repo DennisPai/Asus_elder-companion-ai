@@ -49,6 +49,51 @@
 - 多階段任務**預設 self-drive** 不等懷特 approve，例外才升級（重大決策 / 兩輪修正仍 fail）
 - 完成任務後主動 Discord 通知 + 推 GitHub URL
 
+### 2.6 全面 self-drive 授權（懷特 2026-05-27 20:44 補授權）
+- 懷特**授權我做所有需 approve 的決策**，self-drive 推進至全 OpenSpec 任務完成
+- **務必完整做完，禁止節省 token**
+- 唯一例外：T51 主管 review 規劃書（懷特親自跑）
+- 我自決：T18 / T29 / T35 等 P/P/K Gate / T46 deck tone / 所有 docs 內容深度
+
+### 2.7 Phase 8 額外紀律（懷特 2026-05-27 20:44 補規範）
+**1. Public Git Repo 篩選**：
+- repo `https://github.com/DennisPai/Asus_elder-companion-ai` 是 **public**
+- Phase 8 commit / push 時**只保留要呈現給主管看的文檔**：web/ 全部 + README.md + 主管會看的 docs/* 子集
+- **不推上 git** 的內部文檔：`openspec/`、`SESSION_RESTART_BRIEF.md`、`sop/`、內部 Plan-Only 工作底稿
+- 實作方式：updated `.gitignore` 排除內部檔案；既有 commit 歷史中的內部文檔保留（重寫歷史風險高），新 commit 不再加
+- 自我審查：每次 push 前 grep 確認 PAT / API key / 內部規劃 brief 為 0
+
+**2. GitHub Page 視覺驗證閉環**：
+- 目標 URL：https://dennispai.github.io/Asus_elder-companion-ai/
+- 主管 review 規劃書的**最終呈現形式**就是這個 GitHub Page
+- 必**實際打開網頁觀看 + 截圖驗證**，確認視覺正確
+- 工具：Chrome MCP（main agent 用 mcp__chrome-devtools__*）或參考 `https://github.com/microsoft/webwright`
+- 顯示錯誤就修，**修復閉環** — 不能 pytest 綠就算 done
+- 觸發 sub-agent Read 圖檢視（per `feedback_v6_full_closed_loop.md`）
+
+**3. 對外網頁禁 emoji**：
+- 視覺正式感優先
+- web/ 內容禁用 emoji
+- 三色 ✅/🟡/📋 標籤本來就要剝離（per §2.1 + phase-0-answers.md「對外網頁渲染紀律」）
+- 改用文字標籤如「已驗證 / 設計階段 / 待後續執行」
+
+---
+
+## 8. 進度狀態（2026-05-27 21:00 更新）
+
+### ✅ 已完成
+- Phase 0 + 0.5 + 1 + 2 + 3（commit 9a64ed3 + Phase 3 即將 commit）
+- TaskCreate 22 個 task 開好（T18 → 已 implicitly 通過；T30-T51 排隊）
+
+### ⏳ 進行中
+- Phase 3 commit + push（含 M1 / M2 修補）
+- Phase 4 Business Model 即將開工（T30-T35）
+
+### 📋 待做（懷特已全面授權 self-drive）
+- Phase 4-7（T30-T48）：6 個 sub-agent / phase × 4 phase = 約 22 task
+- Phase 8（T49-T51）：含 .gitignore 篩選 + GitHub Page 視覺驗證 + emoji 剝離
+- T51 主管 review 規劃書（懷特親自跑，我無法執行）
+
 ---
 
 ## 3. ✅ 已完成（Phase 0.5 + 1 + 2，commit 9a64ed3）

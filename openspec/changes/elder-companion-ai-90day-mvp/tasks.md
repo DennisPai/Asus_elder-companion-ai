@@ -32,13 +32,14 @@
 - [x] T22 JTBD + Day-in-the-Life mapping (3 persona × Functional/Emotional/Social) → docs/jtbd-day-in-life.md
 - [x] T23 WTP 範圍假設 (4 framework 交叉) + 付款人辨識 (4 類) → docs/wtp-payer.md
 
-## Phase 3: Product + Tech（W3-4）
-- [ ] T24 Build vs Buy 決策 → docs/build-vs-buy.md
-- [ ] T25 MVP 類型決策（Concierge / Wizard of Oz）→ docs/mvp-type.md
-- [ ] T26 技術架構 + 隱私邊界 → docs/tech-architecture.md
-- [ ] T27 Feature Triage (MoSCoW+RICE+Kano) → docs/feature-triage.md
-- [ ] T28 Safety 紅線清單 → docs/safety-redlines.md
-- [ ] T29 W4 P/P/K Gate #1 → docs/decision-w4.md
+## Phase 3: Product + Tech（W3-4）— DONE 2026-05-27
+- [x] T24 Build vs Buy 決策 → docs/build-vs-buy.md（620 行）
+- [x] T25 MVP 類型決策（Concierge / Wizard of Oz）→ docs/mvp-type.md（514 行）
+- [x] T26 技術架構 + 隱私邊界 → docs/tech-architecture.md（970 行）
+- [x] T27 Feature Triage (MoSCoW+RICE+Kano) → docs/feature-triage.md（440 行）
+- [x] T28 Safety 紅線清單 → docs/safety-redlines.md（832 行）
+- [x] T29 W4 P/P/K Gate #1 → docs/decision-w4.md（658 行；self-drive 結論：主軸 Hyp A B2C DTC Persevere / 次主軸 Hyp D Freemium Persevere 入口 + Hyp B B2B2C Year 1 H2 hedge / Hyp C 保險延 Year 3+）
+- 獨立驗證 sub-agent CONDITIONAL PASS（2 Major / 5 Minor / 3 Nice-to-have）；2 Major 已修補：M1 decision-w4.md「Mode E」→「PM Flow v0.1」/ M2 NT$1,200 vs NT$1,290 跨 doc 校準補注
 
 ## Phase 4: Business Model（W4-5）
 - [ ] T30 Lean Canvas v1 → docs/lean-canvas.md
