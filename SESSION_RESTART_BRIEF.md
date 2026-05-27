@@ -106,18 +106,30 @@
 
 ## 7. ⏳ 下一步明確指令（重啟後立刻做）
 
-### 動作 0: 同步 OpenSpec tasks.md status（必跑）
+### 動作 0: 讀完整 OpenSpec change 三件套（必跑、依序）
+
+OpenSpec change `elder-companion-ai-90day-mvp/` 有 3 份文檔，**全部都要讀**：
 
 ```
-Read openspec/changes/elder-companion-ai-90day-mvp/tasks.md
+1. Read openspec/changes/elder-companion-ai-90day-mvp/proposal.md
+   ← 為什麼做、What Changes、Impact、Out of Scope、Success Criteria
+
+2. Read openspec/changes/elder-companion-ai-90day-mvp/design.md
+   ← 架構決策、PM Flow vs Mode E 對照、Phase 0.5 framework 設計、
+     Hub-Spoke 適用性、GitHub Page 架構、VoltAgent 整合流程、Out of Scope
+
+3. Read openspec/changes/elder-companion-ai-90day-mvp/tasks.md
+   ← SSOT 任務狀態。看哪些 [x] 已勾、哪些 [ ] 未勾
 ```
 
-這份是 SSOT — 看哪些 [x] 已勾、哪些 [ ] 未勾。**目前 status**：
+**目前 task status**（tasks.md 真實 reflect）：
 - Phase 0 (T1-T10a) 全部 [x] 已完成
 - Phase 0.5 (T11-T13) **下一步要做**
 - Phase 1-8 (T14-T54) 後續 phase
 
 進度推進原則：每完成一個 task → Edit tasks.md 把 [ ] 改成 [x] → commit/push。讓 GitHub 上的 tasks.md 永遠 reflect 真實 status。
+
+**proposal.md / design.md 改動規則**：scope 或架構有實質變更才改、改了必跟懷特升級。一般執行進度只動 tasks.md。
 
 ### 動作 1: 派遣 Phase 0.5（5 concept × 7 維度）
 
@@ -221,9 +233,16 @@ VoltAgent local clone：`~/repos/awesome-claude-code-subagents/`
 你的動作：
 1. `cd ~/projects/elder-companion-ai-mvp`
 2. Read `SESSION_RESTART_BRIEF.md`（這份）
-3. **Read `openspec/changes/elder-companion-ai-90day-mvp/tasks.md`**（OpenSpec SSOT 確認 T1-T10a 已勾、T11 是下一步）
-4. Read `sop/phase-0.5-framework.md`
-5. Read `docs/phase-0-answers.md`
-6. 立刻派遣 Phase 0.5 5-agent batch（依第 7 段指令）
-7. 每完成一個 OpenSpec task → Edit tasks.md 改 [x] → commit/push（讓 GitHub 上 status 同步真實進度）
-8. 過程進度推 Discord（走 `/discord-reply` skill）
+3. Read **OpenSpec change 三件套**（依序）：
+   - `openspec/changes/elder-companion-ai-90day-mvp/proposal.md`（為什麼做 / Success Criteria）
+   - `openspec/changes/elder-companion-ai-90day-mvp/design.md`（架構決策 / 完整脈絡）
+   - `openspec/changes/elder-companion-ai-90day-mvp/tasks.md`（SSOT 任務狀態）
+4. Read `sop/pm-flow-v0.1.md`（8 phase / 29 step 完整 SOP）
+5. Read `sop/phase-0.5-framework.md`（下一步要跑的框架）
+6. Read `docs/phase-0-answers.md`（Phase 0 答案 + Plan-Only Mode 校準）
+7. Read `research/voltagent-candidates.md`（11 agent 對應角色說明）
+8. 立刻派遣 Phase 0.5 5-agent batch（依第 7 段指令）
+9. 每完成一個 OpenSpec task → Edit tasks.md 改 [x] → commit/push（讓 GitHub 上 status 同步真實進度）
+10. 過程進度推 Discord（走 `/discord-reply` skill）
+
+**讀取總清單**：SESSION_RESTART_BRIEF.md + 3 份 OpenSpec + 2 份 SOP + phase-0-answers.md + voltagent-candidates.md = **7 份文檔**，全讀完才有完整脈絡。
