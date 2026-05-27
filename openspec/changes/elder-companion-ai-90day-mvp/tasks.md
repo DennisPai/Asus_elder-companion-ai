@@ -50,10 +50,11 @@
 - [x] T35 W6 P/P/K Gate Mid-point → docs/decision-w6.md（849 行；self-drive 結論：Hyp A/D Persevere 確認 / Hyp B 次軸觀察 / Hyp C 延 Year 3+，無 Pivot/Kill/Scale）
 - 獨立驗證 sub-agent CONDITIONAL PASS（4 Major / 6 Minor / 3 Nice-to-have）；4 Major 全修：M1-M3 三 doc 移除 Mode E 校準括號字眼 / M4 lean-canvas + pricing 加 LTV:CAC W4→T33 校準說明（4.04→5.95）；Minor 1/2 task 編號 swap 修補；Minor 5 PDPA 日期統一（2025/12 修訂版 + 2025/11 立法院三讀通過）
 
-## Phase 5: Prototype Build（W5-9）
-- [ ] T36 Sprint 1-2: Wizard of Oz prototype（市售平板 + OpenAI/Claude API + 後台人在環）
-- [ ] T37 Sprint 3: 核心對話 + 緊急 keyword 偵測 + 子女 app
-- [ ] T38 Sprint 4: 閉迴路測試 5-10 家庭 / 1-2 機構
+## Phase 5: Prototype Build 規格書（W5-W12，Plan-Only 校準改規格版）— DONE 2026-05-27
+- [x] T36 Sprint 1-2 規格書（W5-W8 / 4 週）→ docs/sprint-1-2-spec.md（704 行；Wizard-of-Oz 平板 + 9 feature MUST + Operator 補位 SOP）
+- [x] T37 Sprint 3 規格書（W9-W10 / 2 週）→ docs/sprint-3-spec.md（1235 行；核心對話深化 + 緊急偵測 + 子女 App 三大模組）
+- [x] T38 Sprint 4 規格書（W11-W12 / 2 週 + Phase 6 W1 過渡）→ docs/sprint-4-spec.md（924 行；5-10 家庭 + 1-2 機構閉迴路測試 + PMF 5 框架）
+- 獨立驗證 sub-agent CONDITIONAL PASS（5 Major / 6 Minor / 4 Nice-to-have）；5 Major 全修：M1 Sprint 週次 SSOT 對齊 decision-w6 §7.1 / M2 T38 「Sprint 1-3 已驗證」3 處改規劃 / M3 T37「demo」2 處改「內部 review」/ M4 T36 內部時程統一 W5-W8 / 4 週 / 28 天 / M5 預算累計校準 NT$416-538 萬（對齊 sprint-3-spec + sprint-4-spec 自報實際）
 
 ## Phase 6: Pilot + Validation（W9-10）
 - [ ] T39 Pilot Program 招募 → docs/pilot-recruitment.md
