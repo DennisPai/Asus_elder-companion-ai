@@ -98,24 +98,6 @@ export default function SectionAsk() {
           </div>
         </div>
 
-        {/* Closing note */}
-        <div className="bg-white rounded-xl border-2 border-blue-200 p-6 text-center">
-          <div className="text-base font-semibold text-slate-900 mb-2">任何 output 都比沒有明確 feedback 更有價值</div>
-          <div className="text-sm text-slate-600 mt-2">
-            主管 feedback 期望：review 後 7 天內。若有需要補充的分析，24-48 小時內提供。
-          </div>
-          <div className="mt-4 pt-4 border-t border-slate-100 text-xs text-slate-400">
-            完整文件庫：
-            <a
-              href="https://github.com/DennisPai/Asus_elder-companion-ai/tree/main/docs"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="text-blue-500 hover:text-blue-700 underline ml-1"
-            >
-              github.com/DennisPai/Asus_elder-companion-ai/tree/main/docs
-            </a>
-          </div>
-        </div>
       </div>
     </section>
   );
