@@ -72,9 +72,7 @@ AI 基本法 2025/12：子法規未公布是高不確定性，但 3 個月 MVP �
 主管 review 結束後，希望得到的 output：
 - 認為規劃方向可接受 → 計畫啟動
 - 有重大假設需調整 → 更新規劃書後再 review
-- 方向根本不對 → 說清楚哪裡不對
-
-任何 output 對規劃者來說都比「沒有明確 feedback」更有價值。沒有隱藏議程。`,
+- 方向根本不對 → 說清楚哪裡不對`,
     note: '本次 review 不涉及 OEM / 授權 / 合作投資等商業合作討論。',
   },
 ];
@@ -138,46 +136,6 @@ export default function SectionQA() {
               )}
             </div>
           ))}
-        </div>
-
-        {/* Docs links */}
-        <div className="bg-blue-50 rounded-xl border border-blue-200 p-6">
-          <h3 className="text-base font-semibold text-blue-900 mb-4">完整文件庫</h3>
-          <div className="grid md:grid-cols-2 gap-3">
-            {[
-              { label: 'Top 20 完整 Q&A', file: 'qa-top20.md' },
-              { label: '5 年財務模型', file: 'financial-model.md' },
-              { label: '單位經濟模型', file: 'unit-econ.md' },
-              { label: '競品分析（problem-framing）', file: 'problem-framing.md' },
-              { label: '安全紅線框架', file: 'safety-redlines.md' },
-              { label: '認證時程地圖', file: 'cert-timeline.md' },
-              { label: '護城河 Deep Dive', file: 'why-us-moat.md' },
-            ].map((d) => (
-              <a
-                key={d.file}
-                href={`https://github.com/DennisPai/Asus_elder-companion-ai/blob/main/docs/${d.file}`}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="flex items-center gap-2 text-sm text-blue-700 hover:text-blue-900 hover:bg-blue-100 rounded-lg px-3 py-2 transition-colors"
-              >
-                <svg className="w-4 h-4 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
-                </svg>
-                {d.label}
-              </a>
-            ))}
-          </div>
-          <div className="mt-4 pt-4 border-t border-blue-200 text-sm">
-            <a
-              href="https://github.com/DennisPai/Asus_elder-companion-ai/tree/main/docs"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="text-blue-600 hover:text-blue-800 font-medium underline"
-            >
-              github.com/DennisPai/Asus_elder-companion-ai/tree/main/docs
-            </a>
-            <span className="text-blue-600 ml-2">— 所有規劃文件完整索引</span>
-          </div>
         </div>
 
         {/* Footer */}
