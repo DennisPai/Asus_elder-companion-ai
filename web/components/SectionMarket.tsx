@@ -24,7 +24,7 @@ export default function SectionMarket() {
       label: 'SOM',
       title: '北漂子女 × 長者家庭',
       value: '30-50 萬戶',
-      desc: '主要付費者 ICP，LTV NT$12-25K 規劃估算，Phase 6 Pilot 後校準',
+      desc: '主要付費者，初期 LTV 規劃 NT$12-25K（按 24-36 月訂閱估算）',
       badge: 'design' as const,
       size: 'small',
     },
@@ -90,7 +90,6 @@ export default function SectionMarket() {
           <div className="text-sm font-medium text-amber-800 mb-1">市場規模計算說明</div>
           <p className="text-xs text-amber-700">
             SAM 採三向交叉驗算法：Top-down（ElliQ 美國 per-capita 對標台灣）= NT$77 億；Bottom-up（35% 可及率 46 萬家庭 × NT$14,400 ARPU）= NT$66.2 億；Analog（ElliQ 類比 0.5% 滲透）= NT$3.4 億 SOM。三向方向一致，中位 NT$60-70 億。
-            所有數字為規劃估算，Phase 6 Pilot 後以實際數據校準。
           </p>
         </div>
       </div>

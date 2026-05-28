@@ -43,9 +43,9 @@ export default function Hero() {
 
           {/* Meta info */}
           <div className="flex flex-wrap gap-4 text-sm text-blue-300 mb-10">
-            <span>日期：2026-05-27</span>
+            <span>日期：2026-05-28</span>
             <span className="text-blue-500">|</span>
-            <span>規劃主導：Dennis Pai（懷特）</span>
+            <span>規劃主導：Dennis Pai</span>
             <span className="text-blue-500">|</span>
             <a
               href="https://github.com/DennisPai/Asus_elder-companion-ai"

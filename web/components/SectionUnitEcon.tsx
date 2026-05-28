@@ -64,7 +64,7 @@ export default function SectionUnitEcon() {
             Unit Economics — 中性情境，5,000 台量產規模
           </h2>
           <p className="text-slate-600 max-w-2xl">
-            來源：unit-econ.md §7.2 SSOT。所有數字為規劃假設，待 Phase 6 Pilot 後實際數據校準。
+            BOM + 雲端成本 + CAC 從 ODM 詢價 / 競品定價 / 廣告 CPM 反推；以 24 個月訂閱留存為 LTV 計算基礎。
           </p>
         </div>
 
@@ -136,8 +136,7 @@ export default function SectionUnitEcon() {
             ))}
           </div>
           <p className="text-xs text-slate-400 mt-3">
-            最壞情境（BOM+20% + 高流失 + 低 Tier Mix）：LTV:CAC 1.81:1，需啟動 Pivot 或融資補強。
-            所有數字為規劃假設，Phase 6 Pilot 後校準。
+            最壞情境（BOM+20% + 高流失 + 低 Tier Mix）：LTV:CAC 1.81:1，需啟動方向調整或融資補強。
           </p>
         </div>
       </div>

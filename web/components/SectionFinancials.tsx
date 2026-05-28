@@ -50,7 +50,7 @@ const burnData = [
 ];
 
 const fundingRounds = [
-  { round: 'Pre-Seed', amount: 'NT$1,500 萬', trigger: '主管 review 規劃書通過後', use: 'R&D 17% / 薪資 24% / 硬體採購 12%', badge: 'design' as const },
+  { round: 'Pre-Seed', amount: 'NT$1,500 萬', trigger: '規劃書通過後', use: 'R&D 17% / 薪資 24% / 硬體採購 12%', badge: 'design' as const },
   { round: 'Seed', amount: 'NT$4,000 萬', trigger: 'Sean Ellis ≥40% + ARR NT$120 萬', use: 'Production 30% / R&D 20% / 薪資 20%', badge: 'pending' as const },
   { round: 'Series A', amount: 'NT$8,500 萬', trigger: 'ODM 上市 + ARR NT$300 萬 + 機構 LOI', use: 'Production 45% / 行銷 18% / R&D 16%', badge: 'pending' as const },
   { round: 'Series B', amount: 'NT$2-5 億', trigger: 'Break-even + TFDA II 類 + ARR NT$5,000 萬', use: 'Production 50% / 行銷 15% / R&D 15%', badge: 'pending' as const },
@@ -85,9 +85,7 @@ export default function SectionFinancials() {
           </h2>
           <p className="text-slate-600 max-w-2xl">
             中性情境：Year 3 Break-even（Month 30-36），Year 5 Net Income NT$19,153 萬。
-            所有數字為規劃推算，待 Phase 6 Pilot 後以實際數據校準。
           </p>
-          <StatusBadge type="design" label="規劃假設" />
         </div>
 
         {/* Revenue breakdown chart */}

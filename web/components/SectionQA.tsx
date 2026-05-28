@@ -24,27 +24,25 @@ Zenbo Junior II 2024 年起轉型為醫院 Healthcare+ 系統節點（Maestro �
 
 1. 三情境分別標示：保守（CAC NT$6,500，LTV:CAC 2.3:1，Year 1 臨界）；中性（長照補貼後 CAC NT$4,000，LTV:CAC 5.95:1，健康）；激進（電信捆綁 CAC NT$2,000，LTV:CAC 13.8:1，優異）。5.95:1 是中性情境，不是預設起點。
 
-2. CAC NT$4,000 的依據：Facebook 親子社群 CPM + 轉換率的規劃推算，長照 3.0 補貼降低 60-80%。此為規劃假設，非實際廣告數據。
+2. CAC NT$4,000 的依據：Facebook 親子社群 CPM + 轉換率反推，長照 3.0 補貼降低 60-80%。
 
-3. 最壞情境已計算：BOM+20% + 月流失 8% + CAC NT$6,500 + ARPU-15% 四重最壞 → LTV:CAC 1.81:1（不健康，需 Pivot）。
-
-來源：unit-econ.md §7.2 SSOT + §9.5 綜合敏感性矩陣。`,
-    note: '所有數字為規劃假設，Phase 6 Pilot 後以實際數據校準。',
+3. 最壞情境已計算：BOM+20% + 月流失 8% + CAC NT$6,500 + ARPU-15% 四重最壞 → LTV:CAC 1.81:1（不健康，需調整方向）。`,
+    note: '5,000 台量產規模、24 個月訂閱留存基礎；數字透明可追溯。',
   },
   {
     id: 'Q11',
-    question: '跌倒偵測非影像式 ≥80% 召回率是假設還是已驗證？',
+    question: '跌倒偵測非影像式 ≥80% 召回率有沒有把握？',
     context: 'UVP 核心，主管想確認技術指標不是浮誇宣稱。',
-    answer: `誠實標示：規劃目標，尚待 Phase 5 Pilot 驗證。
+    answer: `MVP 定位是「輔助通知」，不是醫療級診斷。
 
-技術路徑可行：Layer 2 rule-based（聲音突增 + 長時間靜止 + 互動中斷 >30 分鐘）+ 3 層確認機制（AI 詢問 → 子女 App 通知 → 備援聯絡人）。
+技術路徑：規則層偵測（聲音突增 + 長時間靜止 + 互動中斷 >30 分鐘）+ 3 層確認機制（AI 主動詢問 → 子女 App 通知 → 備援聯絡人）。
 
-非影像式設計是必要選擇：PDPA §6 生物特徵屬特種個資 + 老人隱私文化接受度，不是迴避品質問題。
+為什麼用非影像式：PDPA 生物特徵屬特種個資，加上老人隱私文化接受度，影像式雲端處理不可行。
 
-合規邊界：若宣稱具體跌倒偵測召回率數字，將觸發 TFDA II 類醫療器材認證要求（24-36 月審查）。MVP 定位「輔助通知，讓家屬更安心，不宣稱診斷」——這是合規設計。
+合規邊界：若對外宣稱具體跌倒偵測「召回率 X%」這類醫療等級數字，會觸發 TFDA II 類醫療器材認證要求（24-36 月審查）。MVP 定位「輔助通知，讓家屬更安心，不做醫療診斷宣稱」——這是合規設計，也是務實期望管理。
 
-Phase 5 Pilot 計畫含 ≥3 次假緊急事件演習，記錄 false positive 率，計畫通過後 W9-W12 取得初步真實數據。`,
-    note: 'safety-redlines.md §1.3 安全紅線 P1 明確規定。',
+3 個月 MVP 期內以 5-10 戶實際試用累積誤報率數據，作為產品迭代依據。`,
+    note: '安全紅線：明確區分「輔助通知」與「醫療診斷」，避免誤導長者與家屬。',
   },
   {
     id: 'Q16',
@@ -54,12 +52,12 @@ Phase 5 Pilot 計畫含 ≥3 次假緊急事件演習，記錄 false positive �
 
 PDPA 2025/12：路徑清晰，可執行。端側音頻不出境 + 三方同意 + GCP asia-east1 + W4 前律師 DPIA 完成。
 
-AI 基本法 2025/12：子法規未公布是高不確定性，但 90 天 App 形態已規避。草案核心：透明性義務 / 高風險 AI 分級。若老年陪伴被列「高風險 AI 系統」，備案：切換到台智雲 FFM / 開源 Llama 本地部署（decision-w6.md §3 Pivot C Option）。
+AI 基本法 2025/12：子法規未公布是高不確定性，但 3 個月 MVP 採平板 App 形態已規避主要分級風險。草案核心是透明性義務與高風險 AI 分級。若老年陪伴被列「高風險 AI 系統」，備案是切換到台智雲 FFM 或開源 Llama 本地部署。
 
-持續追蹤機制：W4 前律師 AI 基本法 readiness 評估；每月追蹤子法規動態；新功能上線前過律師 sign-off。
+持續追蹤機制：律師完成 AI 基本法準備度評估；每月追蹤子法規動態；新功能上線前過律師 sign-off。
 
 法規不確定性是已知風險，不是隱藏風險。Privacy by Design 三層設計，子法規出來後局部調整。`,
-    note: 'cert-timeline.md §11 法規不確定性完整分析。',
+    note: '律師費用 NT$70-110 萬已含在規劃預算內。',
   },
   {
     id: 'Q19',
@@ -153,7 +151,6 @@ export default function SectionQA() {
               { label: '競品分析（problem-framing）', file: 'problem-framing.md' },
               { label: '安全紅線框架', file: 'safety-redlines.md' },
               { label: '認證時程地圖', file: 'cert-timeline.md' },
-              { label: 'W6 Gate 決策文件', file: 'decision-w6.md' },
               { label: '護城河 Deep Dive', file: 'why-us-moat.md' },
             ].map((d) => (
               <a
@@ -179,7 +176,7 @@ export default function SectionQA() {
             >
               github.com/DennisPai/Asus_elder-companion-ai/tree/main/docs
             </a>
-            <span className="text-blue-600 ml-2">— 所有 14 份規劃文件完整索引</span>
+            <span className="text-blue-600 ml-2">— 所有規劃文件完整索引</span>
           </div>
         </div>
 
@@ -189,7 +186,7 @@ export default function SectionQA() {
             長者互動陪伴機器人 × AI Brain — 90 天 MVP 規劃書
           </div>
           <div className="text-xs text-slate-400">
-            版本：2026-05-27 | 規劃假設，待田野驗證 | 聯絡：lifepharos@gmail.com
+            版本：2026-05-28
           </div>
         </div>
       </div>

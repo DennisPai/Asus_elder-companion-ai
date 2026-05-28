@@ -6,7 +6,7 @@ const confirmationItems = [
   {
     num: '01',
     title: '規劃邏輯完整性',
-    desc: '13 Phase × 12 週架構的假設 / 里程碑 / 風險邊界是否清楚？',
+    desc: '90 天 MVP 落地計畫的假設 / 里程碑 / 風險邊界是否清楚？',
     sub: '重點確認：假設標示是否明確、風險邊界是否合理',
   },
   {
@@ -24,16 +24,16 @@ const confirmationItems = [
 ];
 
 const nextSteps = [
-  { time: '核准後 Week 1', action: 'Phase 2 Mom Test 8 人訪談開始', note: 'WTP + 長者互動意願' },
-  { time: 'W2-3', action: 'W3 法規諮詢（TFDA 業者輔導窗口）+ PDPA 律師 DPIA', note: '合規框架確立' },
-  { time: 'W4', action: 'BSMI + NCC + 長照補貼名單三條申請路徑並行啟動', note: 'Critical Path 開始' },
+  { time: '通過後第 1 週', action: '用戶訪談 8 人展開（Mom Test 方法論）', note: 'WTP + 長者互動意願' },
+  { time: '第 2-3 週', action: '法規諮詢（TFDA 業者輔導窗口）+ PDPA 律師 DPIA', note: '合規框架確立' },
+  { time: '第 4 週', action: 'BSMI + NCC + 長照補貼名單三條申請路徑並行啟動', note: '關鍵路徑開始' },
 ];
 
 const supportNeeds = [
   { label: '主管視角 feedback', desc: '對規劃邏輯 / 假設 / 風險的客觀評估意見（最有價值）' },
   { label: '內部知識補充', desc: '若主管有 Zenbo / 台灣長者接受度等相關研究，補充對規劃有幫助' },
   { label: '關鍵聯絡引介', desc: '如有認識長照機構 / 法規主管機關聯絡人，引介可加速驗證' },
-  { label: '後續 update 意願', desc: 'W12 Gate 後 PMF 結果 / 機構 LOI 狀態 update（主管同意才推送）' },
+  { label: '後續 update 意願', desc: '90 天試行後 PMF 結果 / 機構 LOI 狀態 update（主管同意才推送）' },
 ];
 
 export default function SectionAsk() {
@@ -98,20 +98,14 @@ export default function SectionAsk() {
           </div>
         </div>
 
-        {/* Contact & go/no-go */}
+        {/* Closing note */}
         <div className="bg-white rounded-xl border-2 border-blue-200 p-6 text-center">
-          <div className="text-base font-semibold text-slate-900 mb-2">聯絡資訊</div>
-          <a
-            href="mailto:lifepharos@gmail.com"
-            className="text-blue-600 font-medium text-lg hover:text-blue-800 transition-colors"
-          >
-            lifepharos@gmail.com
-          </a>
-          <div className="text-xs text-slate-500 mt-2">
+          <div className="text-base font-semibold text-slate-900 mb-2">任何 output 都比沒有明確 feedback 更有價值</div>
+          <div className="text-sm text-slate-600 mt-2">
             主管 feedback 期望：review 後 7 天內。若有需要補充的分析，24-48 小時內提供。
           </div>
           <div className="mt-4 pt-4 border-t border-slate-100 text-xs text-slate-400">
-            備援資料請向下瀏覽 Q&A 區段，或參閱完整文件庫：
+            完整文件庫：
             <a
               href="https://github.com/DennisPai/Asus_elder-companion-ai/tree/main/docs"
               target="_blank"
